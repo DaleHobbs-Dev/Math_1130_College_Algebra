@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Course Objectives & Unit Outline (Math 1130)</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../shared/css/mathstyles.css">
+    <style>
+        /* =====================================================
+   College Algebra Lecture Notes (D2L inline)
+   - BEM-leaning, simple classes
+   - Accessible defaults responsive media print friendly
+   ===================================================== */
+
+        /* -------- Base -------- */
+        body {
+            font-family: "Verdana", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 1rem;
+            background-color: #fff;
+            color: #000;
+        }
+
+        h1 {
+            color: #001a72;
+            font-size: 2.2em;
+            font-weight: bold;
+            border-bottom: 2px solid #047bc1;
+            padding-bottom: 10px;
+            margin: 0.3rem 0 0.6rem 0;
+        }
+
+        h2 {
+            color: #9d2235;
+            font-size: 1.6em;
+            font-weight: bold;
+            margin: 0.6rem 0 0.4rem 0;
+        }
+
+        h3 {
+            font-size: 1.15em;
+            margin: 0.5rem 0 0.25rem 0;
+        }
+
+        /* Paragraph spacing: normalized (replaces conflicting rules) */
+        p {
+            margin: 0.4rem 0 0.6rem;
+        }
+
+        ul {
+            margin-top: 0.3rem;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            text-align: left;
+            color: #001a72;
+            margin-bottom: 10px;
+        }
+
+        /* -------- Lists -------- */
+        /* Opt-in lower-alpha ordered list */
+        ol.a-list {
+            list-style-type: lower-alpha;
+            padding-left: 2em;
+            margin: 0.4rem 0 0.6rem;
+        }
+
+        ol.a-list li {
+            margin: 0.25rem 0;
+        }
+
+        /* -------- Media -------- */
+        img,
+        svg,
+        canvas,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figure {
+            margin: 0.6rem 0;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 0.25rem;
+        }
+
+        /* Responsive iframe wrapper (e.g., Desmos) */
+        .embed {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0.75rem 0;
+            aspect-ratio: 16/9;
+            background: #f8f8f8;
+            border: 1px solid #e0e0e0;
+        }
+
+        .embed iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* -------- Callouts -------- */
+        /* Keep legacy look for .definition per original spec */
+        .definition {
+            border: 4px solid red;
+            padding: 0.25rem;
+            margin: 0.25rem;
+            background-color: #ffffff;
+        }
+
+        /* Subtle left-accent style for other callouts */
+        .example,
+        .solution,
+        .theorem,
+        .proof,
+        .note,
+        .warning,
+        .important {
+            border-left: 6px solid #ccc;
+            background-color: #ffffff;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+            border-radius: 4px;
+        }
+
+        .example {
+            border-left-color: #2f855a;
+        }
+
+        /* green */
+        .solution {
+            border-left-color: #6b46c1;
+        }
+
+        /* purple */
+        .theorem {
+            border-left-color: #047bc1;
+        }
+
+        /* blue */
+        .proof {
+            border-left-color: #555;
+        }
+
+        /* gray */
+        .note {
+            border-left-color: #888;
+        }
+
+        /* neutral */
+        .warning {
+            border-left-color: #c05621;
+            background-color: #fff8f2;
+        }
+
+        /* orange tint */
+        .important {
+            border-left-color: #9d2235;
+            background-color: #fff5f7;
+        }
+
+        /* crimson tint */
+
+        .example-number {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .example-label,
+        .solution-label {
+            font-style: italic;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        /* -------- Inline utilities -------- */
+        .blanked {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            min-width: 4rem;
+            height: 1.2em;
+        }
+
+        .code-block {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            background-color: #f0f0f0;
+            padding: 0.5rem;
+            border-left: 4px solid #ccc;
+        }
+
+        .copyable {
+            cursor: pointer;
+            user-select: all;
+        }
+
+        .unit-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .muted {
+            color: #555;
+            font-style: italic;
+        }
+
+        /* -------- Links & focus (a11y) -------- */
+        a {
+            color: #047bc1;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        :focus-visible {
+            outline: 3px solid #001a72;
+            outline-offset: 2px;
+        }
+
+        /* Screen-reader only utility */
+        .sr-only {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /* -------- Tables -------- */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #f3f6fb;
+            text-align: left;
+        }
+
+        /* -------- Motion & printing -------- */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important
+            }
+        }
+
+        @media print {
+            body {
+                color: #000;
+                background: #fff
+            }
+
+            a {
+                color: #000;
+                text-decoration: underline
+            }
+
+            .page-break {
+                page-break-before: always
+            }
+
+            .embed {
+                border: 0;
+                background: none
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main id="unit-1" class="content" role="main">
+        <header class="page-header">
+            <h1>Unit 1: Introduction to Functions</h1>
+            <h2>Functions Basics: Relations and Evaluating Functions</h2>
+        </header>
+
+        <section id="outcomes" aria-labelledby="outcomes-h">
+            <h3 id="outcomes-h">Module Learning Outcomes</h3>
+            <ul>
+                <li>Determine if a relation is a function</li>
+                <li>Find the domain and range for a relation</li>
+                <li>Evaluate a function for a given value or expression</li>
+            </ul>
+        </section>
+
+        <section id="relation-function" aria-labelledby="relation-function-h">
+            <h2 id="relation-function-h">What is a Relation and a Function?</h2>
+
+            <div class="definition" role="note" aria-label="Definition: relation and function">
+                <p>
+                    A <span class="blanked"><span class="sr-only">Blank</span></span> is any set of ordered pairs, $(x,
+                    y)$.
+                    The
+                    set of all possible inputs, or the collection of $x$-values in the ordered pairs, makes up the
+                    <span class="blanked"><span class="sr-only">Blank</span></span>. The set of all possible outputs, or
+                    the
+                    collection of $y$-values in the ordered pairs, together make up the
+                    <span class="blanked"><span class="sr-only">Blank</span></span>.
+                </p>
+                <p>
+                    A <span class="blanked"><span class="sr-only">Blank</span></span> is a
+                    <strong><u>relation</u></strong>
+                    with
+                    a one-to-one correspondence from $A$ to $B$, where each element of $A$ is paired with one, and only
+                    one,
+                    element of $B$. Here, $A$ is the
+                    <span class="blanked"><span class="sr-only">Blank</span></span> of the function, and $B$ is the
+                    <span class="blanked"><span class="sr-only">Blank</span></span>. In other words, a relation is a
+                    function if each input corresponds to <strong><u>exactly one</u></strong> output.
+                </p>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">1</span>.</span>
+                    Use the arrow diagrams to determine whether the relation represents a function. Explain your
+                    reasoning.
+                </h3>
+
+                <figure>
+                    <img class="img-centered img-medium" src="images/arrow%20diagram%201.PNG"
+                        alt="Arrow diagram: set A = {a,b,c,d} to set B = {1,2,3,4}. Each element of A maps to a single element in B." />
+                    <figcaption>Diagram A</figcaption>
+                </figure>
+
+                <figure>
+                    <img class="img-centered img-medium" src="images/arrow%20diagram%2021.PNG"
+                        alt="Arrow diagram: a, b map to 1 and 2 respectively c, d map to 3." />
+                    <figcaption>Diagram B</figcaption>
+                </figure>
+
+                <figure>
+                    <img class="img-centered img-medium" src="images/arrow%20diagram%203.PNG"
+                        alt="Arrow diagram: a, b map to 1 and 2 c maps to both 3 and 4 d has a single mapping." />
+                    <figcaption>Diagram C</figcaption>
+                </figure>
+
+                <div class="solution"></div>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">2</span>.</span>
+                    Determine whether the relation represents a function. Explain why or why not. State the domain and
+                    range.
+                </h3>
+
+                <ol class="a-list">
+                    <li>
+                        Set of ordered pairs: $\{(0,1),\ (3,4),\ (2,1),\ (5,6)\}$
+                        <ul>
+                            <li>Domain: <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                            <li>Range: <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                            <li>
+                                Is the relation a function? Why or why not?
+                                <span class="blanked"><span class="sr-only">Blank</span></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Set of ordered pairs: $\{(2,3),\ (-1,0),\ (-1,1)\}$
+                        <ul>
+                            <li>Domain: <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                            <li>Range: <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                            <li>
+                                Is the relation a function? Why or why not?
+                                <span class="blanked"><span class="sr-only">Blank</span></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="solution"></div>
+            </div>
+        </section>
+
+        <section id="function-notation" aria-labelledby="function-notation-h">
+            <h2 id="function-notation-h">Function Notation</h2>
+
+            <div class="definition" role="note" aria-label="Definition: function notation">
+                <p>For the function $y = f(x)$:</p>
+                <ul>
+                    <li>$f$ is the name of the function.</li>
+                    <li>$x$ is the domain value (input).</li>
+                    <li>$f(x)$ is the range value $y$ corresponding to the value of $x$ (output).</li>
+                </ul>
+                <p>We read $f(x)$ as “$f$ of $x$” or “the value of $f$ at $x$”.</p>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">3</span>.</span>
+                    Find the indicated function value for $f(x) = x^{2} - 3x$.
+                </h3>
+
+                <ol class="a-list">
+                    <li>$f(0) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(-2) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(-2) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(b) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(b+2) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(-x) - f(x) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                </ol>
+
+                <div class="solution"></div>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">4</span>.</span>
+                    Find the indicated function value for $f(x) = \sqrt{x-1} - |x - y|$ where $x = 4$ and $y = -1$.
+                </h3>
+
+                <p>Work: <span class="blanked"><span class="sr-only">Blank</span></span></p>
+                <div class="solution"></div>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">5</span>.</span>
+                    Find the indicated function value for $f(x) = -2x - 3$.
+                </h3>
+
+                <ol class="a-list">
+                    <li>$f(a) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$f(x-h) = \(\,\)$ <span class="blanked"><span class="sr-only">Blank</span></span></li>
+                    <li>$\dfrac{f(x+h)-f(x)}{h} = \(\,\)$ <span class="blanked"><span
+                                class="sr-only">Blank</span></span>
+                    </li>
+                </ol>
+
+                <div class="solution"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

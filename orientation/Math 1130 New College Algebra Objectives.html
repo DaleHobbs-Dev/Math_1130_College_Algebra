@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Algebra — Course Objectives & Unit Outline (Math 1130)</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="../shared/css/mathstyles.css">
+  <style>
+    /* =====================================================
+     College Algebra Lecture Notes (D2L inline)
+     - BEM-leaning, simple classes
+     - Accessible defaults responsive media print friendly
+     ===================================================== */
+
+    /* -------- Base -------- */
+    body {
+      font-family: "Verdana", Arial, sans-serif line-height: 1.6 margin: 1rem background-color: #fff color: #000
+    }
+
+    h1 {
+      color: #001a72 font-size: 2.2em font-weight: bold border-bottom: 2px solid #047bc1 padding-bottom: 10px margin: 0.3rem 0 0.6rem 0
+    }
+
+    h2 {
+      color: #9d2235 font-size: 1.6em font-weight: bold margin: 0.6rem 0 0.4rem 0
+    }
+
+    h3 {
+      font-size: 1.15em margin: 0.5rem 0 0.25rem 0
+    }
+
+    /* Paragraph spacing: normalized (replaces conflicting rules) */
+    p {
+      margin: 0.4rem 0 0.6rem
+    }
+
+    ul {
+      margin-top: 0.3rem
+    }
+
+    .page-break {
+      page-break-before: always
+    }
+
+    caption {
+      caption-side: top font-size: 1.5em text-align: left color: #001a72 margin-bottom: 10px
+    }
+
+    /* -------- Lists -------- */
+    /* Opt-in lower-alpha ordered list */
+    ol.a-list {
+      list-style-type: lower-alpha padding-left: 2em margin: 0.4rem 0 0.6rem
+    }
+
+    ol.a-list li {
+      margin: 0.25rem 0
+    }
+
+    /* -------- Media -------- */
+    img,
+    svg,
+    canvas,
+    video {
+      max-width: 100% height: auto
+    }
+
+    figure {
+      margin: 0.6rem 0
+    }
+
+    figcaption {
+      font-size: 0.9em color: #555 margin-top: 0.25rem
+    }
+
+    /* Responsive iframe wrapper (e.g., Desmos) */
+    .embed {
+      position: relative width: 100% max-width: 900px margin: 0.75rem 0 aspect-ratio: 16/9 background: #f8f8f8 border: 1px solid #e0e0e0
+    }
+
+    .embed iframe {
+      position: absolute inset: 0 width: 100% height: 100% border: 0
+    }
+
+    /* -------- Callouts -------- */
+    /* Keep legacy look for .definition per original spec */
+    .definition {
+      border: 4px solid red padding: 0.25rem margin: 0.25rem background-color: #ffffff
+    }
+
+    /* Subtle left-accent style for other callouts */
+    .example,
+    .solution,
+    .theorem,
+    .proof,
+    .note,
+    .warning,
+    .important {
+      border-left: 6px solid #ccc background-color: #ffffff padding: 0.75rem 1rem margin: 0.75rem 0 border-radius: 4px
+    }
+
+    .example {
+      border-left-color: #2f855a
+    }
+
+    /* green */
+    .solution {
+      border-left-color: #6b46c1
+    }
+
+    /* purple */
+    .theorem {
+      border-left-color: #047bc1
+    }
+
+    /* blue */
+    .proof {
+      border-left-color: #555
+    }
+
+    /* gray */
+    .note {
+      border-left-color: #888
+    }
+
+    /* neutral */
+    .warning {
+      border-left-color: #c05621 background-color: #fff8f2
+    }
+
+    /* orange tint */
+    .important {
+      border-left-color: #9d2235 background-color: #fff5f7
+    }
+
+    /* crimson tint */
+
+    .example-number {
+      font-weight: bold margin-bottom: 0.25rem display: block
+    }
+
+    .example-label,
+    .solution-label {
+      font-style: italic margin-top: 0.25rem display: block
+    }
+
+    /* -------- Inline utilities -------- */
+    .blanked {
+      border-bottom: 1px solid #000 display: inline-block min-width: 4rem height: 1.2em
+    }
+
+    .code-block {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace background-color: #f0f0f0 padding: 0.5rem border-left: 4px solid #ccc
+    }
+
+    .copyable {
+      cursor: pointer user-select: all
+    }
+
+    .unit-card {
+      border: 1px solid #e0e0e0 border-radius: 0.5rem padding: 0.75rem 1rem margin-bottom: 0.75rem box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+    }
+
+    .muted {
+      color: #555 font-style: italic
+    }
+
+    /* -------- Links & focus (a11y) -------- */
+    a {
+      color: #047bc1 text-decoration: underline
+    }
+
+    a:hover {
+      text-decoration: none
+    }
+
+    :focus-visible {
+      outline: 3px solid #001a72 outline-offset: 2px
+    }
+
+    /* Screen-reader only utility */
+    .sr-only {
+      position: absolute !important width: 1px !important height: 1px !important padding: 0 !important margin: -1px !important overflow: hidden !important clip: rect(0, 0, 0, 0) !important white-space: nowrap !important border: 0 !important
+    }
+
+    /* -------- Tables -------- */
+    table {
+      border-collapse: collapse width: 100%
+    }
+
+    th,
+    td {
+      padding: 0.5rem border: 1px solid #ddd
+    }
+
+    th {
+      background: #f3f6fb text-align: left
+    }
+
+    /* -------- Motion & printing -------- */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.001ms !important animation-iteration-count: 1 !important transition-duration: 0.001ms !important scroll-behavior: auto !important
+      }
+    }
+
+    @media print {
+      body {
+        color: #000 background: #fff
+      }
+
+      a {
+        color: #000 text-decoration: underline
+      }
+
+      .page-break {
+        page-break-before: always
+      }
+
+      .embed {
+        border: 0 background: none
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row mb-4">
+      <div class="col-12 col-md-10 offset-md-1">
+
+        <h1>College Algebra — Course Objectives & Unit Outline (Math 1130)</h1>
+        <p class="muted">This document summarizes unit topics, just-in-time remediation, and suggested applications to
+          guide instruction and assessment across the term.</p>
+
+        <h2>Exam 1 Material</h2>
+
+        <div class="unit-card">
+          <h3>Unit 1: Function Basics</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Relations and Functions:</em> Determine whether a relation is a function identify the
+              domain and
+              range of a relation.</li>
+            <li><em>Function Evaluation:</em> Evaluate functions for given inputs (polynomial, roots, absolute value).
+            </li>
+            <li><em>Graph Characteristics:</em> Use the vertical line test identify domain and range from a
+              graph
+              determine whether a point lies on a function interpret open vs. closed circles
+              <span class="muted">(optional: discuss continuity)</span>.
+            </li>
+            <li><em>Just‑in‑Time Remediation — Exponents:</em> Review product, quotient, power, and zero‑exponent rules.
+            </li>
+            <li><em>Algebraic Operations on Functions:</em> Perform addition, subtraction, multiplication, and division
+              of functions. Problems reinforce factoring (GCF) and FOIL if polynomial division is covered,
+              express
+              results in quotient–remainder form. <span class="muted">Synthetic division may be previewed when graphing
+                polynomials (covered more in Precalculus).</span></li>
+            <li><em>Function Composition:</em> Find compositions and determine domains (and, when appropriate, ranges)
+              of composite functions.</li>
+          </ul>
+        </div>
+
+        <div class="unit-card">
+          <h3>Unit 2: Exploring Linear Equations and Their Functions</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Solving Linear Equations:</em> Include fractional coefficients recognize no‑solution and
+              infinitely‑many‑solutions cases. <span class="muted">(Optional fraction review assignment.)</span></li>
+            <li><em>Slope and Intercepts:</em> Find slope and intercepts use slope with a point to write an
+              equation
+              (Point‑Slope Form included).</li>
+            <li><em>Graphing Linear Functions:</em> Graph, and identify domain and range from graphs.</li>
+            <li><em>Parallel &amp Perpendicular Lines:</em> Write equations through a given point parallel
+              or
+              perpendicular to a given line.</li>
+            <li><em>Applications:</em> Solve real‑world problems using line graphs.</li>
+            <li><em>Systems of Linear Equations:</em> Solve systems apply to real‑world, business, and
+              mixture
+              problems.</li>
+          </ul>
+        </div>
+
+        <div class="unit-card">
+          <h3>Unit 3: Factoring</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Greatest Common Factor (GCF):</em> Identify and factor out the GCF. <span class="muted">(Optional
+                reinforcement.)</span></li>
+            <li><em>Factoring Techniques:</em> Trinomials (leading coefficient 1 and &ne 1)
+              factoring by grouping.
+            </li>
+            <li><em>Special Products:</em> Difference of squares perfect square trinomials sum
+              and difference of
+              cubes.</li>
+          </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>Exam 2 Material</h2>
+
+        <div class="unit-card">
+          <h3>Unit 4: Quadratic Equations and Their Functions</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Just‑in‑Time Remediation — Radicals:</em> Simplify radicals to standard form understand
+              basic
+              radical constraints (e.g., no negative radicands for even roots) rationalize single‑term
+              denominators.
+            </li>
+            <li><em>Solving Quadratics:</em> Solve using square‑root property, factoring, and quadratic
+              formula <span class="muted">(optional: completing the square, especially if conics are
+                introduced)</span>.</li>
+            <li><em>Quadratic Functions:</em> Identify vertex graph identify minimum/maximum,
+              domain, and range apply
+              to real‑world contexts.</li>
+          </ul>
+        </div>
+
+        <div class="unit-card">
+          <h3>Unit 5: The Big Family of Functions &amp Transformations</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Exploring &amp Graphing:</em> Square, absolute value, cubic, and square‑root
+              functions apply
+              vertical/horizontal shifts and reflections across the x‑axis.</li>
+            <li><em>Equation Writing from Graphs:</em> Write a function equation from a given graph. Vertical
+              stretch/compression restricted to 1 or −1 (except parabolas, to reinforce quadratics and prepare for
+              Precalculus).</li>
+            <li><em>Additional Concepts:</em> Determine domain and range for all functions studied.</li>
+          </ul>
+        </div>
+
+        <div class="unit-card">
+          <h3>Unit 6: Rational &amp Radical Equations</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Rational Equations:</em> Include chemistry‑relevant contexts require factoring where
+              appropriate
+              identify excluded values and invalid solutions discuss domain restrictions <span class="muted">(without
+                full rational function graphing)</span>. Many problems reduce to linear or quadratic equations to
+              reinforce earlier skills.</li>
+            <li><em>Radical Equations:</em> Solve and include examples with no real solution to build conceptual
+              understanding.</li>
+          </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>Exam 3 Material</h2>
+
+        <div class="unit-card">
+          <h3>Unit 7: Inverse Functions</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li>Determine whether two functions are inverses.</li>
+            <li>Find inverse functions algebraically.</li>
+            <li>Identify domains and ranges of inverses and explain the domain–range swap relative to the original
+              function (including rational and radical examples).</li>
+          </ul>
+        </div>
+
+        <div class="unit-card">
+          <h3>Unit 8: Exponential &amp Logarithmic Functions</h3>
+          <strong>Topics Covered</strong>
+          <ul>
+            <li><em>Exponential Functions:</em> Explore graphs solve applications (including chemistry and
+              biology)
+              identify domain and range.</li>
+            <li><em>Logarithmic Functions:</em> Convert between exponential and logarithmic forms evaluate
+              common (log)
+              and natural (ln) logs explore graphs identify domain and range apply
+              to real‑world contexts.</li>
+            <li><em>Just‑in‑Time Remediation — Exponents:</em> Review negative and fractional exponents to prepare for
+              log properties.</li>
+            <li><em>Properties of Logarithms:</em> Product, Quotient, Power Rules Change‑of‑Base Formula.
+            </li>
+            <li><em>Solving Equations:</em> Solve exponentials by rewriting with common bases (reinforcing exponent
+              rules, especially the power rule) and using logarithms when appropriate.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MathJax Scripts (kept for future math rendering if needed) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    } & nbsp;& nbsp;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Use type="module" so imports work modules are deferred by default -->
+  <script type="module" src="../shared/js/main.js"></script>
+</body>
+
+</html>

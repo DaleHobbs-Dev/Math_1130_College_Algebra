@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Involving Rational Expressions</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="section-6-7" class="content" role="main">
+        <header class="page-header">
+            <h1>Applications of Rational Expressions</h1>
+        </header>
+
+        <section id="solve-for-variable" aria-labelledby="solve-for-variable-h">
+            <h2 id="solve-for-variable-h">Solving for a Variable in a Formula</h2>
+            <p>
+                In many math and science courses, formulas are used to relate quantities. Sometimes we are given a
+                formula
+                and asked to solve for a different variable than the one that is already isolated.
+            </p>
+            <p>
+                One familiar example is the distance formula \(d=rt\), where \(d\) is distance, \(r\) is rate, and \(t\)
+                is
+                time.
+                If the rate and time are known, then the formula gives distance. But if distance and time are known,
+                then we
+                may want to rewrite the formula to solve for the rate instead.
+            </p>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">1</span>.</span>
+                </h3>
+                <p><strong>Solve for the indicated variable.</strong></p>
+
+                <div class="row g-3">
+
+                    <!-- Left Column -->
+                    <div class="col-12 col-md-6">
+
+                        <div class="problem">
+                            <p><strong>(a)</strong> Solve for \(r\) in \(d=rt\).</p>
+                            <div class="solution space-xxl"></div>
+                        </div>
+
+                        <div class="problem">
+                            <p><strong>(b)</strong> Solve for \(x\) in \(A=\dfrac{x+h}{2}\).</p>
+                            <div class="solution space-xxxl"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-12 col-md-6">
+
+                        <div class="problem">
+                            <p><strong>(c)</strong> Solve for \(r\) in \(P=\dfrac{A}{1+r}\).</p>
+                            <div class="solution space-xxl"></div>
+                        </div>
+
+                        <div class="problem">
+                            <p><strong>(d)</strong> Solve for \(m_1\) in \(F=\dfrac{Gm_1m_2}{d^2}\).</p>
+                            <div class="solution space-xxxl"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Full-width last problem -->
+                <div class="problem mt-3">
+                    <p><strong>(e)</strong> Solve for \(R_1\) in \(\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}\).</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <section id="distance-rate" aria-labelledby="distance-rate-h">
+            <h2 id="distance-rate-h">Solving Distance and Rate Problems</h2>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">6</span>.</span>
+                </h3>
+                <p>Solve the following proportion applications.</p>
+                <ol class="a-list">
+                    <li>
+                        A scale drawing of a playground uses a scale of \(1.5\) inches for every \(12\) feet. If the
+                        actual
+                        length of a walking path is \(58\) feet, how long should the path appear on the drawing? Round
+                        to
+                        the
+                        nearest tenth of an inch.
+                        <div class="solution space-xxl"></div>
+                    </li>
+                    <li>
+                        Suppose the following triangles are similar. Find the value of \(y\).
+                        <figure>
+                            <img class="img-centered" src="./images/similar_triangles.jpg"
+                                alt="Two similar triangles labeled NMP and RQT with corresponding sides marked 4, 5y−2, 8y/3 and 3, 2y+2, 2y.">
+                            <figcaption>
+                                Two similar triangles, △NMP and △RQT, are shown with corresponding sides labeled.
+                                In △NMP, the sides are 4, 5y − 2, and 8y/3. In △RQT, the corresponding sides are
+                                3, 2y + 2, and 2y. The diagram is used to set up a proportion based on similarity.
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="page-break"></div>
+
+            <p>
+                The following distance-rate-time problems use the formula \(d=rt\), where \(d\) is distance, \(r\) is
+                rate,
+                and \(t\) is time.
+            </p>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">7</span>.</span>
+                </h3>
+                <p>
+                    Kellen&rsquo;s boat travels \(12\) mph in still water. Find the rate of the current if she can go
+                    \(6\) miles upstream in the same amount of time that she can go \(10\) miles downstream.
+                </p>
+
+                <table aria-label="Rate table for boat current problem">
+                    <caption>Organizing the information</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Distance</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Downstream</th>
+                            <td>10</td>
+                            <td>\(12+r\)</td>
+                            <td>\(\quad\)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Upstream</th>
+                            <td>6</td>
+                            <td>\(12-r\)</td>
+                            <td>\(\quad\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="solution space-xl"></div>
+            </div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">8</span>.</span>
+                </h3>
+                <p>
+                    A small airplane flies \(240\) miles with a \(20\) mph tailwind and then returns the same route
+                    against
+                    the wind. If the total flight time is \(5\) hours, find the speed of the plane in still air.
+                </p>
+
+                <table aria-label="Rate table for airplane wind problem">
+                    <caption>Organizing the information</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Distance</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">With tailwind</th>
+                            <td>240</td>
+                            <td>\(\quad\)</td>
+                            <td>\(\quad\)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Against wind</th>
+                            <td>240</td>
+                            <td>\(\quad\)</td>
+                            <td>\(\quad\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- <section id="work-problems" aria-labelledby="work-problems-h">
+            <h2 id="work-problems-h">Combined Work Problems</h2>
+            <p>
+                For work problems, we use the idea that
+                <strong>(rate of work) &times; (time worked) = amount of job completed</strong>.
+            </p>
+            <p>
+                If a person can complete one whole job in \(t\) units of time, then that person completes
+                \(\dfrac{1}{t}\) of the job in one unit of time.
+            </p>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">9</span>.</span>
+                </h3>
+                <p>
+                    Dwight and Jim want to prepare a shipment of paper to send to clients. Jim can do the job alone in
+                    \(15\) minutes. Dwight can do the same job alone in \(12\) minutes. How long will it take them to
+                    complete the shipment if they work together?
+                </p>
+
+                <table aria-label="Work-rate table for Dwight and Jim">
+                    <caption>Organizing the information</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Fraction of job completed in 1 minute</th>
+                            <th scope="col">Time working together</th>
+                            <th scope="col">Fraction of job completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Jim</th>
+                            <td>\(\dfrac{1}{15}\)</td>
+                            <td>\(x\)</td>
+                            <td>\(\dfrac{x}{15}\)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dwight</th>
+                            <td>\(\dfrac{1}{12}\)</td>
+                            <td>\(x\)</td>
+                            <td>\(\dfrac{x}{12}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="solution space-xxxxl"></div>
+            </div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">10</span>.</span>
+                </h3>
+                <p>
+                    Mrs. Disher can grade a set of tests in \(5\) hours working alone. If her student teacher helps, the
+                    two
+                    of them can finish grading the set in \(3\) hours. How long would it take the student teacher to
+                    grade
+                    the
+                    tests alone?
+                </p>
+
+                <table aria-label="Work-rate table for grading tests">
+                    <caption>Organizing the information</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Fraction of job completed in 1 hour</th>
+                            <th scope="col">Time working together</th>
+                            <th scope="col">Fraction of job completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Mrs. Disher</th>
+                            <td>\(\dfrac{1}{5}\)</td>
+                            <td>3</td>
+                            <td>\(\dfrac{3}{5}\)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Student teacher</th>
+                            <td>\(\dfrac{1}{x}\)</td>
+                            <td>3</td>
+                            <td>\(\dfrac{3}{x}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="solution space-xxxxl"></div>
+            </div>
+        </section> -->
+
+        <section id="variation" aria-labelledby="variation-h">
+            <h2 id="variation-h">Solving Variation Problems</h2>
+
+            <div class="definition">
+                <p><strong>Direct Variation:</strong> If \(x\) varies directly as \(y\), then \(x=ky\).</p>
+                <p><strong>Inverse Variation:</strong> If \(x\) varies inversely as \(y\), then \(x=\dfrac{k}{y}\).</p>
+                <p><strong>Joint Variation:</strong> If \(y\) varies jointly as \(x\) and \(z\), then \(y=kxz\).</p>
+            </div>
+
+            <div class="note">
+                <p>
+                    <strong>Hint:</strong> In a direct variation, the two quantities move together. In an inverse
+                    variation,
+                    one quantity increases while the other decreases.
+                </p>
+            </div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">11</span>.</span>
+                </h3>
+                <p>If \(x\) varies directly as \(y\), and \(x=9\) when \(y=3\), find \(x\) when \(y=12\).</p>
+                <div class="solution space-xl"></div>
+            </div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">12</span>.</span>
+                </h3>
+                <p>If \(m\) varies inversely as \(p^2\), and \(m=20\) when \(p=2\), find \(m\) when \(p=5\).</p>
+                <div class="solution space-xl"></div>
+            </div>
+
+            <div class="page-break"></div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">13</span>.</span>
+                </h3>
+                <p>
+                    The amount of light produced by a light source varies inversely as the square of the distance from
+                    the
+                    source. If the illumination produced \(2\) meters from a light source is \(192\) foot-candles, find
+                    the
+                    illumination produced \(6\) meters from the same source.
+                </p>
+                <div class="solution space-xl"></div>
+            </div>
+
+            <div class="example">
+                <h3>
+                    <span class="example-number">Example <span class="example-number__index">14</span>.</span>
+                </h3>
+                <p>
+                    Assume \(p\) varies jointly as \(q\) and \(r^2\), and \(p=200\) when \(q=2\) and \(r=3\). Find \(p\)
+                    when
+                    \(q=5\) and \(r=2\).
+                </p>
+                <div class="solution space-xl"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Course Objectives & Unit Outline (Math 1130)</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="poly-add-sub" class="content" role="main">
+        <header class="page-header">
+            <h1>Adding and Subtracting Polynomials</h1>
+        </header>
+
+        <section id="poly-terminology" aria-labelledby="poly-terminology-h">
+            <h2 id="poly-terminology-h">Polynomial Terminology</h2>
+
+            <div class="definition" role="note" aria-label="Definition: term">
+                <p>
+                    <strong>Definition:</strong> A <span class="blanked blanked--md"><span
+                            class="sr-only">Blank</span></span>
+                    is a number or the product of a number and one or more variables raised to powers.
+                </p>
+            </div>
+
+            <div class="definition" role="note" aria-label="Definition: coefficient">
+                <p>
+                    <strong>Definition:</strong> A <span class="blanked blanked--xl"><span
+                            class="sr-only">Blank</span></span>
+                    is the numerical factor of a term.
+                </p>
+            </div>
+
+            <h3>Terms and Coefficients</h3>
+
+            <table class="table-spacious" aria-label="Terms and coefficients table">
+                <thead>
+                    <tr>
+                        <th scope="col">Terms</th>
+                        <th scope="col">Coefficients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$-3xy^2$</td>
+                        <td><span class="blanked"><span class="sr-only">Blank</span></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>$-z^3$</td>
+                        <td><span class="blanked"><span class="sr-only">Blank</span></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>$x$</td>
+                        <td><span class="blanked"><span class="sr-only">Blank</span></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>$4$</td>
+                        <td><span class="blanked"><span class="sr-only">Blank</span></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>$\dfrac{w^2 y^4}{7}$</td>
+                        <td><span class="blanked"><span class="sr-only">Blank</span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="definition" role="note" aria-label="Definition: polynomial">
+                <p>
+                    <strong>Definition:</strong> A <span class="blanked blanked--xl"><span
+                            class="sr-only">Blank</span></span>
+                    is a finite sum of terms in which all variables are raised to non-negative integer powers (0, 1, 2,
+                    3,
+                    etc.)
+                    and no variables appear in any denominator.
+                </p>
+            </div>
+
+            <div class="page-break"></div>
+
+            <h3>Polynomial vs. Not a Polynomial</h3>
+            <table class="table-spacious" aria-label="Polynomial versus not a polynomial table">
+                <thead>
+                    <tr>
+                        <th scope="col">Polynomial</th>
+                        <th scope="col">Not Polynomial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$-3xy^2 + 5yz$</td>
+                        <td>$5x^{-3} + 2x$</td>
+                    </tr>
+
+                    <tr>
+                        <td>$-2x^3 + 4x - \dfrac{1}{3}$</td>
+                        <td>$\dfrac{6}{x^2} + 4x + 8$</td>
+                    </tr>
+
+                    <tr>
+                        <td>$4$</td>
+                        <td>$7 + \sqrt{x}$</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <p>There are three common types of polynomial names that are very good to be acquainted with in this course.
+            </p>
+            <ul>
+                <li>
+                    A <span class="blanked blanked--xl"><span class="sr-only">Blank</span></span> is a polynomial
+                    consisting of one
+                    term.
+                </li>
+                <li>
+                    A <span class="blanked blanked--xl"><span class="sr-only">Blank</span></span> is a polynomial
+                    consisting of two
+                    terms.
+                </li>
+                <li>
+                    A <span class="blanked blanked--xl "><span class="sr-only">Blank</span></span> is a polynomial
+                    consisting of
+                    three
+                    terms.
+                </li>
+            </ul>
+
+            <div class="definition" role="note" aria-label="Definition: degree of a term">
+                <p>
+                    <strong>Definition:</strong> The <span class="blanked blanked--md"><span
+                            class="sr-only">Blank</span></span>
+                    of a term is the sum of the exponents on the variables contained in the term.
+                </p>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">1</span>.</span>
+                    Find the degree of each term below.
+                </h3>
+
+                <ol class="a-list row g-3" aria-label="Find the degree of each term">
+                    <li class="col-12 col-md-6">
+                        <p>$2x^3$</p>
+                        <div class="solution space-md"></div>
+                    </li>
+
+                    <li class="col-12 col-md-6">
+                        <p>$x$</p>
+                        <div class="solution space-md"></div>
+                    </li>
+
+                    <li class="col-12 col-md-6">
+                        <p>$7x^2y^3$</p>
+                        <div class="solution space-md"></div>
+                    </li>
+
+                    <li class="col-12 col-md-6">
+                        <p>$9$</p>
+                        <div class="solution space-md"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="definition" role="note" aria-label="Definition: degree of a polynomial">
+                <p>
+                    <strong>Definition:</strong> The <span class="blanked blanked--md"><span
+                            class="sr-only">Blank</span></span>
+                    of a polynomial is the largest degree of a single term in the polynomial.
+                </p>
+            </div>
+
+            <div class="page-break"></div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">2</span>.</span>
+                    Tell if the following polynomials are monomials, binomials, or trinomials and then tell the degree
+                    of the
+                    polynomial.
+                </h3>
+
+                <ol class="a-list row g-3" aria-label="Classify each polynomial and state its degree">
+                    <li class="col-12 col-md-6">
+                        <p>$4x^5 + 7x^3 - 1$</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+
+                    <li class="col-12 col-md-6">
+                        <p>$6y + y^3$</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+
+                    <li class="col-12">
+                        <p>$-2xy^2 + 5x^3y - 8xy + 4$</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="add-sub-polynomials" aria-labelledby="add-sub-polynomials-h">
+            <h2 id="add-sub-polynomials-h">Adding and Subtracting Polynomials</h2>
+
+            <div class="definition" role="note" aria-label="Definition: like terms">
+                <p>
+                    <strong>Definition:</strong>
+                    <span class="blanked"><span class="sr-only">Blank</span></span>
+                    are terms that contain exactly the same variables raised to exactly the same powers.
+                </p>
+            </div>
+
+            <p>Adding or subtracting polynomials is all about combining like terms. Let’s try some examples below.</p>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">3</span>.</span>
+                    Simplify the following by combining like terms.
+                </h3>
+
+                <ol class="a-list row g-3" aria-label="Combine like terms practice">
+                    <li class="col-12 col-md-6">
+                        <p>$10x^3 - 12x^3 - 3x$</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+
+                    <li class="col-12 col-md-6">
+                        <p>$-6ab + 2a + 12ab - a$</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">4</span>.</span>
+                    Add the following polynomials.
+                </h3>
+
+                <p class="muted">Add</p>
+                <p>
+                    $14x^4 - 6x^3 + x^2 - 6$
+                    <span class="muted">to</span>
+                    $x^3 - 5x^2 + 1$
+                </p>
+
+                <div class="solution"></div>
+            </div>
+
+            <div class="page-break"></div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">5</span>.</span>
+                    Subtract the following polynomials.
+                </h3>
+
+                <p class="muted">Subtract</p>
+                <p>
+                    $9x^4 + x^2 - 18$
+                    <span class="muted">from</span>
+                    $7x^4 - 8x^2 + x$
+                </p>
+
+                <div class="solution space-xxl"></div>
+            </div>
+
+            <div class="example">
+                <h3 class="example__header">
+                    <span class="example-number">Example <span class="example-number__index">6</span>.</span>
+                    Add or subtract the polynomials. Write the answers in simplest form, using descending order.
+                </h3>
+
+                <ol class="a-list row g-3" aria-label="Add or subtract polynomials practice">
+                    <li class="col-12 col-md-6">
+                        <p>$(-5x + 7x^2 + 13) + (9x - 50 + 4x^2)$</p>
+                        <div class="solution space-xxl"></div>
+                    </li>
+
+                    <li class="col-12">
+                        <p>$(5w^5 + 9w^2 - 3) - (8w^5 - 7w^2 + 11)$</p>
+                        <div class="solution space-xxl"></div>
+                    </li>
+
+                    <li class="col-12">
+                        <p>$(-5a^4 + 8a^2 - 9) - (6a^3 - a^2 + 2)$</p>
+                        <p class="muted">One way to organize addition/subtraction is to align like terms vertically:</p>
+                        <table class="table-spacious" aria-label="Stacked subtraction of polynomials">
+                            <tbody>
+                                <tr>
+                                    <td>$-5a^4$</td>
+                                    <td></td>
+                                    <td>$+8a^2$</td>
+                                    <td>$-9$</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 2px solid #000;"></td>
+                                    <td style="border-bottom: 2px solid #000;">$-6a^3$</td>
+                                    <td style="border-bottom: 2px solid #000;">$+a^2$</td>
+                                    <td style="border-bottom: 2px solid #000;">$-2$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="solution space-xxl"></div>
+                    </li>
+
+                    <li class="col-12">
+                        <p>$-8 + 7n - (n - 1) - (11n + 9) + (6 - 3n)$</p>
+                        <div class="solution space-xxl"></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

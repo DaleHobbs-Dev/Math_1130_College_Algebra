@@ -1,0 +1,499 @@
+/* =============================================================================
+   Math 1130 – Lecture Notes Stylesheet
+   BEM-leaning, accessible defaults, responsive, print-friendly
+   ============================================================================= */
+
+/* =============================================================================
+   DESIGN TOKENS
+   ============================================================================= */
+
+:root {
+  --color-navy: #001a72; /* page headings, badges, focus ring */
+  --color-crimson: #9d2235; /* h2, .important accent */
+  --color-blue: #047bc1; /* h1 rule, .theorem accent, links */
+  --color-green: #2f855a; /* .example accent */
+  --color-orange: #c05621; /* .warning accent */
+  --color-gray: #555; /* .proof accent, muted text, figcaptions */
+}
+
+/* =============================================================================
+   BASE
+   ============================================================================= */
+
+body {
+  font-family: "Verdana", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
+
+h1 {
+  color: var(--color-navy);
+  font-size: 2.2em;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 10px;
+  margin: 0.3rem 0 0.6rem;
+}
+
+h2 {
+  color: var(--color-crimson);
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0.6rem 0 0.4rem;
+}
+
+h3 {
+  font-size: 1.15em;
+  margin: 0.5rem 0 0.25rem;
+}
+
+p {
+  margin: 0.4rem 0 0.6rem;
+}
+
+ul {
+  margin-top: 0.3rem;
+}
+
+/* Opt-in lower-alpha ordered list */
+ol.a-list {
+  list-style-type: lower-alpha;
+  padding-left: 2em;
+  margin: 0.4rem 0 0.6rem;
+}
+ol.a-list li {
+  margin: 0.25rem 0;
+}
+
+/* =============================================================================
+   LINKS & ACCESSIBILITY
+   ============================================================================= */
+
+a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+/* Visually hidden but announced by assistive technology */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* =============================================================================
+   LAYOUT
+   ============================================================================= */
+
+/* Centered content column */
+.content {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.content > section {
+  margin-block: 1.25rem;
+}
+
+.page-header {
+  margin-block: 0 1rem;
+}
+.page-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+/* =============================================================================
+   MEDIA
+   ============================================================================= */
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0.6rem 0;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--color-gray);
+  margin-top: 0.25rem;
+}
+
+/* Responsive iframe wrapper (e.g., Desmos embeds) */
+.embed {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0.75rem 0;
+  aspect-ratio: 16 / 9;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+}
+.embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Image size helpers */
+.img-small {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+}
+.img-medium {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+}
+.img-large {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+}
+.img-centered {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* =============================================================================
+   CALLOUTS
+   ============================================================================= */
+
+/* Definition: legacy red-border box */
+.definition {
+  border: 4px solid red;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  background-color: #fff;
+}
+
+/* Shared left-accent base for all other callout types */
+.example,
+.solution,
+.theorem,
+.proof,
+.note,
+.warning,
+.important {
+  border-left: 6px solid #ccc;
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  border-radius: 4px;
+}
+
+.example {
+  border-left-color: var(--color-green);
+}
+.solution {
+  border-left: none;
+  min-height: 3rem;
+}
+.theorem {
+  border-left-color: var(--color-blue);
+}
+.proof {
+  border-left-color: var(--color-gray);
+}
+.note {
+  border-left-color: #888;
+}
+.warning {
+  border-left-color: var(--color-orange);
+  background-color: #fff8f2;
+}
+.important {
+  border-left-color: var(--color-crimson);
+  background-color: #fff5f7;
+}
+
+/* =============================================================================
+   EXAMPLES (BEM)
+   ============================================================================= */
+
+.example__header {
+  margin: 0 0 0.5rem;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--color-navy);
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.example-number {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-navy);
+}
+
+.example-number__index {
+  font-variant-numeric: tabular-nums;
+  padding: 0 0.25rem;
+  border-radius: 4px;
+  background: #f3f6fb;
+  border: 1px solid #e0e6f3;
+}
+
+/* Tighten spacing between the number badge and following text */
+.example__header .example-number + * {
+  margin-left: 0.15rem;
+}
+
+/* Italic labels used inside examples and solutions */
+.example-label,
+.solution-label {
+  font-style: italic;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* =============================================================================
+   TABLES
+   ============================================================================= */
+
+caption {
+  caption-side: top;
+  font-size: 1.5em;
+  text-align: left;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #f3f6fb;
+  text-align: left;
+}
+
+/* Spacious variant — extra room for in-class annotations */
+.table-spacious th,
+.table-spacious td {
+  padding: 1rem;
+  min-height: 2.25rem;
+  vertical-align: top;
+}
+.table-spacious td .blanked {
+  margin-top: 1rem;
+}
+
+/* Compact variant — tight padding for data-dense tables */
+.table-compact th,
+.table-compact td {
+  padding: 0.25rem 0.4rem;
+}
+.table-compact caption {
+  margin-bottom: 0.5rem;
+}
+
+/* =============================================================================
+   INLINE UTILITIES
+   ============================================================================= */
+
+/* Fill-in-the-blank: renders as an underlined blank space on screen */
+.blanked {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  min-width: 4rem;
+  height: 1.2em;
+}
+
+/* Blank width modifiers */
+.blanked--xs {
+  min-width: 2.5rem;
+}
+.blanked--sm {
+  min-width: 4rem;
+} /* default */
+.blanked--md {
+  min-width: 6rem;
+}
+.blanked--lg {
+  min-width: 8rem;
+}
+.blanked--xl {
+  min-width: 12rem;
+}
+
+/* Inline monospace code block */
+.code-block {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-left: 4px solid #ccc;
+}
+
+/* Select all text on click */
+.copyable {
+  cursor: pointer;
+  user-select: all;
+}
+
+/* Unit/topic card */
+.unit-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* De-emphasized secondary text */
+.muted {
+  color: var(--color-gray);
+  font-style: italic;
+}
+
+/* =============================================================================
+   SPACING UTILITIES
+   Use for intentional vertical pauses between ideas, math, or sections.
+   ============================================================================= */
+
+.space-xs {
+  margin-bottom: 0.25rem;
+}
+.space-sm {
+  margin-bottom: 0.75rem;
+}
+.space-md {
+  margin-bottom: 1.25rem;
+}
+.space-lg {
+  margin-bottom: 2rem;
+}
+.space-xl {
+  margin-bottom: 3rem;
+}
+.space-xxl {
+  margin-bottom: 4.5rem;
+}
+.space-xxxl {
+  margin-bottom: 6rem;
+}
+.space-xxxxl {
+  margin-bottom: 9rem;
+}
+
+/* =============================================================================
+   PRINT
+   ============================================================================= */
+
+/* Triggers a page break before the element — works in both screen and print */
+.page-break {
+  page-break-before: always;
+}
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .embed {
+    border: 0;
+    background: none;
+  }
+
+  /* Keep Bootstrap grid columns in print */
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Force 2-column layout for .col-md-6 */
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  .row,
+  .col-12,
+  .col-md-6,
+  figure {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Tighten Bootstrap gutters for paper */
+  .g-3 {
+    --bs-gutter-x: 0.75rem !important;
+    --bs-gutter-y: 0.5rem !important;
+  }
+
+  /* Normalize image widths for print */
+  .img-downsized,
+  .img-small,
+  .img-medium,
+  .img-large {
+    width: 60%;
+    max-width: none;
+  }
+
+  /* Prevent list items from splitting across pages */
+  ol.a-list > li,
+  .row > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* =============================================================================
+   REDUCED MOTION
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

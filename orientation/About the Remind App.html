@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Remind Application</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your shared stylesheet -->
+    <link rel="stylesheet" href="../shared/css/mathstyles.css">
+
+    <style>
+        /* Keep your base styles */
+        body {
+            font-family: 'Verdana', Arial, sans-serif line-height: 1.6 margin: 1rem background-color: #fff color: #000
+        }
+
+        h1 {
+            color: #001A72 font-size: 2.5em font-weight: bold border-bottom: 2px solid #047BC1 padding-bottom: 10px margin: 0.3rem 0 0.2rem 0
+        }
+
+        h2 {
+            color: #9D2235 font-size: 1.75em font-weight: bold margin: 0 0 0.2rem 0
+        }
+
+        p {
+            margin-bottom: 0.2rem padding: 0 margin: 0
+        }
+
+        caption {
+            caption-side: top font-size: 1.5em text-align: left color: #001A72 margin-bottom: 10px
+        }
+
+        .example,
+        .solution,
+        .note,
+        .warning,
+        .important {
+            background-color: #ffffff padding: 0.5rem margin: 0.5rem 0 border-left: 4px solid #ccc
+        }
+
+        .important {
+            border-left-color: #047BC1
+        }
+
+        .note {
+            border-left-color: #6c757d
+        }
+
+        .warning {
+            border-left-color: #dc3545
+        }
+
+        .code-block {
+            font-family: monospace background-color: #f0f0f0 padding: 0.5rem border-left: 4px solid #ccc overflow-x: auto
+        }
+
+        .small-muted {
+            font-size: 0.95rem color: #555
+        }
+
+        .section-spacer {
+            margin-top: 0.8rem
+        }
+
+        .callout-title {
+            font-weight: bold display: block margin-bottom: 0.25rem
+        }
+
+        /* Optional: make lists breathe a bit under your compact <p> rules */
+        ul,
+        ol {
+            margin: 0.4rem 0 0.6rem 1.2rem
+        }
+
+        li {
+            margin-bottom: 0.3rem
+        }
+
+        /* Narrow tables look better centered */
+        .table-wrap {
+            display: flex justify-content: center
+        }
+
+        .table-narrow {
+            width: 100% max-width: 900px
+        }
+
+        /* Tiny helper for copy button next to code */
+        .copy-row {
+            display: flex align-items: center gap: 0.5rem
+        }
+
+        .copy-btn {
+            border: 1px solid #ccc background: #fafafa padding: 0.25rem 0.5rem cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-10 offset-1 col-md-10 offset-md-1">
+                <!-- Page title -->
+                <h1>Texting Through the Remind App</h1>
+                <p class="small-muted">The easiest way to reach me for quick questions and updates.</p>
+
+                <!-- Intro -->
+                <p>
+                    My preferred contact method is the
+                    <a href="https://www.remind.com/join/2267bhd" target="_blank" rel="noopener">Remind app</a>
+                    on your phone. It’s a free, secure texting platform that allows me to share
+                    announcements and reminders — and lets you send me quick questions without
+                    sharing phone numbers.
+                </p>
+
+                <!-- Enrollment steps -->
+                <div class="section-spacer"></div>
+                <h2>How to Join</h2>
+                <ul>
+                    <li>
+                        <strong>Download the app:</strong> Install the Remind app and enter the course
+                        code <code>@2267bhd</code>.
+                    </li>
+                    <li>
+                        <strong>Text directly:</strong> Text <code>@2267bhd</code> to <code>81010</code>,
+                        then reply with the name you go by in this course.
+                    </li>
+                    <li>
+                        <strong>Quick link (mobile):</strong>
+                        <a href="https://www.remind.com/join/2267bhd" target="_blank" rel="noopener">Join Math 1130
+                            Remind</a>
+                    </li>
+                    <li>
+                        Need more details? Watch the short video below.
+                    </li>
+                </ul>
+
+                <!-- Video -->
+                <div class="embed">
+                    <iframe src="https://www.youtube.com/embed/DLP__QYSOj4?wmode=opaque&amprel=0"
+                        title="How to use Remind App"
+                        allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <!-- Usage info -->
+                <div class="section-spacer"></div>
+                <h2>Why Use Remind?</h2>
+                <div class="note" role="note" aria-label="Instructor use of Remind">
+                    <span class="callout-title">Here’s how I’ll use it</span>
+                    <ul class="m-0">
+                        <li>Send short announcements and reminders about deadlines</li>
+                        <li>Answer homework or course questions you text me</li>
+                        <li>Provide quick clarifications when you’re stuck</li>
+                    </ul>
+                </div>
+                <p>
+                    If you’re asking about a specific homework problem, please send a clear
+                    screenshot of the problem from your screen so I can help you more quickly.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small utility script to copy from a <pre> by id -->
+    <script>
+        function copyFrom(preID) {
+            const el = document.getElementById(preID) & nbsp;& nbsp;
+            if (!el) return& nbsp;& nbsp;
+            const text = el.innerText || el.textContent || '' & nbsp;& nbsp;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard.') & nbsp;& nbsp;
+            }).catch(() => {
+                try {
+                    const range = document.createRange() & nbsp;& nbsp;
+                    range.selectNodeContents(el) & nbsp;& nbsp;
+                    const sel = window.getSelection() & nbsp;& nbsp;
+                    sel.removeAllRanges() & nbsp;& nbsp;
+                    sel.addRange(range) & nbsp;& nbsp;
+                    document.execCommand('copy') & nbsp;& nbsp;
+                    sel.removeAllRanges() & nbsp;& nbsp;
+                    alert('Copied to clipboard.') & nbsp;& nbsp;
+                } catch (e) {
+                    console.error(e) & nbsp;& nbsp;
+                }
+            }) & nbsp;& nbsp;
+        }
+    </script>
+
+    <!-- (Optional) MathJax, kept for math-heavy courses safe to remove if not needed -->
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } } & nbsp;& nbsp;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>

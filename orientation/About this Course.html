@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Course</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your shared stylesheet -->
+    <link rel="stylesheet" href="../shared/css/mathstyles.css">
+
+    <style>
+        /* Keep your base styles */
+        body {
+            font-family: 'Verdana', Arial, sans-serif line-height: 1.6 margin: 1rem background-color: #fff color: #000
+        }
+
+        h1 {
+            color: #001A72 font-size: 2.5em font-weight: bold border-bottom: 2px solid #047BC1 padding-bottom: 10px margin: 0.3rem 0 0.2rem 0
+        }
+
+        h2 {
+            color: #9D2235 font-size: 1.75em font-weight: bold margin: 0 0 0.2rem 0
+        }
+
+        p {
+            margin-bottom: 0.2rem padding: 0 margin: 0
+        }
+
+        caption {
+            caption-side: top font-size: 1.5em text-align: left color: #001A72 margin-bottom: 10px
+        }
+
+        .example,
+        .solution,
+        .note,
+        .warning,
+        .important {
+            background-color: #ffffff padding: 0.5rem margin: 0.5rem 0 border-left: 4px solid #ccc
+        }
+
+        .important {
+            border-left-color: #047BC1
+        }
+
+        .note {
+            border-left-color: #6c757d
+        }
+
+        .warning {
+            border-left-color: #dc3545
+        }
+
+        .code-block {
+            font-family: monospace background-color: #f0f0f0 padding: 0.5rem border-left: 4px solid #ccc overflow-x: auto
+        }
+
+        .small-muted {
+            font-size: 0.95rem color: #555
+        }
+
+        .section-spacer {
+            margin-top: 0.8rem
+        }
+
+        .callout-title {
+            font-weight: bold display: block margin-bottom: 0.25rem
+        }
+
+        /* Optional: make lists breathe a bit under your compact <p> rules */
+        ul,
+        ol {
+            margin: 0.4rem 0 0.6rem 1.2rem
+        }
+
+        li {
+            margin-bottom: 0.3rem
+        }
+
+        /* Narrow tables look better centered */
+        .table-wrap {
+            display: flex justify-content: center
+        }
+
+        .table-narrow {
+            width: 100% max-width: 900px
+        }
+
+        /* Tiny helper for copy button next to code */
+        .copy-row {
+            display: flex align-items: center gap: 0.5rem
+        }
+
+        .copy-btn {
+            border: 1px solid #ccc background: #fafafa padding: 0.25rem 0.5rem cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-10 offset-1 col-md-10 offset-md-1">
+                <!-- Page title -->
+                <h1>About This Course</h1>
+                <p class="small-muted">MATH 1130 — College Algebra (3 Credit Hours)</p>
+
+                <!-- Course description -->
+                <div class="section-spacer"></div>
+                <h2>Course Overview</h2>
+                <p>
+                    This course provides a solid foundation in college algebra. You will study
+                    linear, quadratic, polynomial, rational, radical, exponential, and logarithmic
+                    functions, with emphasis on applications of these concepts to real-world
+                    problems. By the end of the course, you will be able to connect symbolic
+                    algebra with graphical and contextual representations.
+                </p>
+
+                <!-- Notes -->
+                <div class="section-spacer"></div>
+                <h2>Course Essentials</h2>
+                <ul>
+                    <li>
+                        <strong>Online Campus:</strong> This site contains all essential course
+                        information and tools. The
+                        <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=10304097&amptype=content&amprcode=TBRTrainin-7554384"
+                            target="_blank" rel="noopener">
+                            syllabus
+                        </a>
+                        is located in the <em>Start Here</em> module. Be sure to read it carefully.
+                    </li>
+                    <li>
+                        <strong>Start Here:</strong> Work through each step in the <em>Start Here</em>
+                        module to get comfortable with Online Campus.
+                    </li>
+                    <li>
+                        <strong>MyLab Math:</strong> Access the e-textbook, homework, and lesson
+                        quizzes through the MyLab Math section.
+                    </li>
+                    <li>
+                        <strong>Deadlines:</strong> This is <em>not</em> a self-paced course. You
+                        must follow the posted deadlines to stay on track. Deadlines are posted in
+                        the <a
+                            href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=10304097&amptype=content&amprcode=TBRTrainin-7554385"
+                            target="_blank" rel="noopener">
+                            Deadlines for the Course
+                        </a> page inside the <em>Start Here</em> module.
+                    </li>
+                    <li>
+                        <strong>Grades:</strong> Your current average is always available in the
+                        <em>MyLab Math Gradebook</em>.
+                    </li>
+                </ul>
+
+                <!-- Callout -->
+                <div class="important" role="note" aria-label="Student success tip">
+                    <span class="callout-title">Success Tip</span>
+                    <p class="m-0">
+                        Consistency is key — check Online Campus daily, stay ahead on homework, and
+                        communicate with your instructor whenever questions arise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small utility script to copy from a <pre> by id -->
+    <script>
+        function copyFrom(preID) {
+            const el = document.getElementById(preID) & nbsp;& nbsp;
+            if (!el) return& nbsp;& nbsp;
+            const text = el.innerText || el.textContent || '' & nbsp;& nbsp;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard.') & nbsp;& nbsp;
+            }).catch(() => {
+                try {
+                    const range = document.createRange() & nbsp;& nbsp;
+                    range.selectNodeContents(el) & nbsp;& nbsp;
+                    const sel = window.getSelection() & nbsp;& nbsp;
+                    sel.removeAllRanges() & nbsp;& nbsp;
+                    sel.addRange(range) & nbsp;& nbsp;
+                    document.execCommand('copy') & nbsp;& nbsp;
+                    sel.removeAllRanges() & nbsp;& nbsp;
+                    alert('Copied to clipboard.') & nbsp;& nbsp;
+                } catch (e) {
+                    console.error(e) & nbsp;& nbsp;
+                }
+            }) & nbsp;& nbsp;
+        }
+    </script>
+
+    <!-- (Optional) MathJax, kept for math-heavy courses safe to remove if not needed -->
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } } & nbsp;& nbsp;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>
