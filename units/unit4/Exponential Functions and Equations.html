@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Exponential Functions and Equations</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="exponential-functions-equations" class="content" role="main">
+        <header class="page-header">
+            <h1>Exponential Functions and Equations</h1>
+        </header>
+
+        <section id="intro" aria-labelledby="intro-h">
+            <h2 id="intro-h">Exponential Functions</h2>
+
+            <p>
+                Many real-world phenomena, such as bacteria growth, radioactive decay, population growth dynamics,
+                and compound interest, are modeled with <span class="blanked"
+                    aria-label="blank for note-taking">exponential</span> functions.
+            </p>
+
+            <div class="definition" role="note" aria-labelledby="def-exp-h">
+                <h3 id="def-exp-h">Definition</h3>
+                <p>An exponential function is a function of the form</p>
+                <p class="cstate-math">\[f(x)=C\cdot a^x\]</p>
+                <p>
+                    where \(a\) is a positive real number with \(a\neq 1\), and \(C\) is a nonzero real number.
+                    In this course, we will usually focus on the simpler form
+                </p>
+                <p class="cstate-math"><span class="blank-space"
+                        aria-label="blank space for note-taking">\[f(x)=a^x\]</span></p>
+                <p>
+                    In an exponential function, the variable \(x\) is in the exponent, so \(x\) is called the
+                    <span class="blanked" aria-label="blank for note-taking">exponent</span>.
+                </p>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="why-base-rules-h">
+                <h3 id="why-base-rules-h">Why do we require these conditions on the base?</h3>
+                <ol>
+                    <li>
+                        <p>
+                            Why is \(a=1\) not allowed? Because \(1^x=1\) for every real number \(x\), so the function
+                            would
+                            be constant
+                            and would not show growth or decay.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Why does \(a\) have to be positive? A negative base can create outputs that are not real
+                            numbers
+                            for many
+                            exponent values, especially non-integer exponents, so the function would not be defined for
+                            all
+                            real \(x\).
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section id="graphs" aria-labelledby="graphs-h">
+            <h2 id="graphs-h">Graphs of Exponential Functions</h2>
+
+            <div class="example" aria-labelledby="tchart-h">
+                <h3 id="tchart-h">
+                    <span class="example-number">Example <span class="example-number__index">1</span>.</span>
+                </h3>
+                <p>Make a T-chart for the function \(y=2^x\) and sketch its graph.</p>
+
+                <div class="tchart-layout" aria-label="T-chart and graphing grid for y equals 2 to the x">
+                    <figure class="tchart-figure" aria-labelledby="tchart-cap">
+                        <table class="tchart-table">
+                            <caption id="tchart-cap">T-chart for \(y=2^x\)</caption>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">\(x\)</th>
+                                    <th scope="col">\(y=2^x\)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\(-3\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(-2\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(-1\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(0\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(1\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(2\)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>\(3\)</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+
+                    <figure class="tchart-graph" aria-labelledby="exp-grid-cap">
+                        <img src="images/exponential_function_graph_grid.jpg"
+                            alt="Blank coordinate grid from x equals negative 5 to 5 and y equals negative 1 to 10 for graphing the function y equals 2 to the x."
+                            class="img-small">
+                        <figcaption id="exp-grid-cap">
+                            Placeholder graphing grid for \(y=2^x\). Replace this image source with your extracted
+                            classroom graph
+                            image.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="solution space-xxxl"
+                    aria-label="Space to complete the T-chart discussion and sketch the graph">
+                    <p class="muted">Use this space to discuss the table values, plot points, and sketch the curve of
+                        \(y=2^x\).</p>
+                </div>
+            </div>
+
+            <div class="example" aria-labelledby="growth-decay-h">
+                <h3 id="growth-decay-h">
+                    <span class="example-number">Example <span class="example-number__index">2</span>.</span>
+                </h3>
+                <p>
+                    Sketch the general shapes of exponential growth and exponential decay. State the domain and identify
+                    the
+                    line
+                    \(y=0\) as the horizontal asymptote.
+                </p>
+
+                <div class="row g-3" aria-label="Exponential growth and decay comparison">
+                    <div class="col-12 col-md-6">
+                        <div class="note" role="note" aria-labelledby="growth-note-h">
+                            <h3 id="growth-note-h">Exponential Growth</h3>
+                            <p>Occurs when \(a&gt;1\).</p>
+                            <p>Domain: \((-\infty,\infty)\)</p>
+                            <p>Range: \((0,\infty)\)</p>
+                            <p>Horizontal asymptote: \(y=0\)</p>
+                        </div>
+                        <div class="solution space-xxxl" aria-label="Space to sketch exponential growth">
+                            <p class="muted">Use this space to draw a general exponential growth curve.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="note" role="note" aria-labelledby="decay-note-h">
+                            <h3 id="decay-note-h">Exponential Decay</h3>
+                            <p>Occurs when \(0&lt;a&lt;1\).</p>
+                            <p>Domain: \((-\infty,\infty)\)</p>
+                            <p>Range: \((0,\infty)\)</p>
+                            <p>Horizontal asymptote: \(y=0\)</p>
+                        </div>
+                        <div class="solution space-xxxl" aria-label="Space to sketch exponential decay">
+                            <p class="muted">Use this space to draw a general exponential decay curve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="euler-number" aria-labelledby="euler-h">
+            <h2 id="euler-h">Euler&rsquo;s Number</h2>
+
+            <div class="definition" role="note" aria-labelledby="def-e-h">
+                <h3 id="def-e-h">Definition</h3>
+                <p>
+                    The number <span class="blank-space" aria-label="blank for note-taking">e</span>
+                    \(\approx 2.7182818\ldots\) is an
+                    <span class="blanked" aria-label="blank for note-taking">irrational</span> number.
+                </p>
+                <p>
+                    One way to define it is through the limit
+                </p>
+                <p class="cstate-math">\[e=\displaystyle \lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x\]</p>
+                <p>
+                    This number appears naturally in calculus, finance, growth models, and differential equations.
+                </p>
+            </div>
+
+            <div class="important" role="note" aria-labelledby="e-facts-h">
+                <h3 id="e-facts-h">Why \(e\) matters</h3>
+                <ul>
+                    <li>
+                        <p>\(e^x\) is the exponential function with especially useful algebra and calculus properties.
+                        </p>
+                    </li>
+                    <li>
+                        <p>It models continuous growth and continuous compounding.</p>
+                    </li>
+                    <li>
+                        <p>The natural logarithm \(\ln(x)\) is defined using base \(e\).</p>
+                    </li>
+                    <li>
+                        <p>The graph of \(y=e^x\) has the same basic shape as other exponential growth graphs, but it is
+                            the
+                            most important exponential function in higher mathematics.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="example" aria-labelledby="approx-e-h">
+                <h3 id="approx-e-h">
+                    <span class="example-number">Example <span class="example-number__index">3</span>.</span>
+                </h3>
+                <p>Approximate \(e^{1.2}\) using a calculator.</p>
+                <div class="solution space-xl" aria-label="Space to approximate e to the 1.2 power">
+                    <p class="muted">Use this space to evaluate \(e^{1.2}\) and discuss calculator entry.</p>
+                </div>
+            </div>
+
+            <div class="example" aria-labelledby="graph-ex-h">
+                <h3 id="graph-ex-h">
+                    <span class="example-number">Example <span class="example-number__index">4</span>.</span>
+                </h3>
+                <p>Sketch the graph of the function \(f(x)=e^x\).</p>
+                <div class="solution space-xxxl" aria-label="Space to sketch the graph of f of x equals e to the x">
+                    <p class="muted">Use this space to plot a few key points, identify the intercept, and sketch the
+                        shape
+                        of \(f(x)=e^x\).</p>
+                </div>
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section id="solving" aria-labelledby="solving-h">
+            <h2 id="solving-h">Solving Equations Involving Exponents that are Variables</h2>
+
+            <p>
+                Many exponential equations can be solved without logarithms by using the one-to-one property of
+                exponential
+                functions.
+                In particular, if
+            </p>
+            <p class="cstate-math">\[a^{x_1}=a^{x_2}\]</p>
+            <p>
+                for a base \(a&gt;0\) with \(a\neq 1\), then it must be the case that:
+            </p>
+            <p class="cstate-math"><span class="blank-space">\(x_1=x_2\)</span></p>
+
+            <p>
+                So the goal is to rewrite both sides with the same
+                <span class="blanked" aria-label="blank for note-taking">base</span>.
+                Then set the
+                <span class="blanked" aria-label="blank for note-taking">exponents</span>
+                equal to each other and solve.
+            </p>
+
+            <div class="example" aria-labelledby="solve-basic-h">
+                <h3 id="solve-basic-h">
+                    <span class="example-number">Example <span class="example-number__index">5</span>.</span>
+                </h3>
+                <p>Solve the following exponential equations for the unknown variable. Check solutions with a calculator
+                    if desired.
+                </p>
+
+                <div class="row g-3" aria-label="Basic exponential equations">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(7^x=7^3\)</p>
+                                <div class="solution space-lg"
+                                    aria-label="Space to solve seven to the x equals seven cubed">
+                                    <p class="muted">Match bases, then set exponents equal.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(2^{2x-1}=4\)</p>
+                                <div class="solution space-xl"
+                                    aria-label="Space to solve two to the quantity two x minus one equals four">
+                                    <p class="muted">Rewrite \(4\) using base \(2\).</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="3">
+                            <li>
+                                <p>\(3^4=3^{x-1}\)</p>
+                                <div class="solution space-lg"
+                                    aria-label="Space to solve three to the fourth equals three to the x minus one">
+                                    <p class="muted">Set exponents equal after the bases match.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(3^{x-4}=27\)</p>
+                                <div class="solution space-xl"
+                                    aria-label="Space to solve three to the x minus four equals twenty-seven">
+                                    <p class="muted">Rewrite \(27\) as a power of \(3\).</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="neg-exp-h">
+                <h3 id="neg-exp-h">Recall</h3>
+                <p>Before doing the next set of problems, remember these exponent rules:</p>
+                <p class="cstate-math">
+                    \[a^{-s}=\dfrac{1}{a^s}, \quad \text{ and } \quad \dfrac{1}{a^{-s}}=a^s\]
+                </p>
+            </div>
+
+            <div class="example" aria-labelledby="solve-more-h">
+                <h3 id="solve-more-h">
+                    <span class="example-number">Example <span class="example-number__index">6</span>.</span>
+                </h3>
+                <p>Solve each equation. These are arranged in a two-column format for class work.</p>
+
+                <div class="row g-3" aria-label="Additional exponential equations in two columns">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(\dfrac{1}{6^{-x}}=36\)</p>
+                                <div class="solution space-xxxl">
+                                    <p class="muted">Simplify the left side first.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(5^{x+2}=\dfrac{1}{5}\)</p>
+                                <div class="solution space-xxxl">
+                                    <p class="muted">Rewrite the right side as a power of \(5\).</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(3^{3x-4}=\dfrac{1}{27}\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Express both sides with base \(3\).</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(3^{x^2}=9^x\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Rewrite \(9^x\) using base \(3\), then compare exponents carefully.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(9^x=27\)</p>
+                                <div class="solution space-xxxl">
+                                    <p class="muted">Rewrite both sides using a common prime base.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="6">
+                            <li>
+                                <p>\(9^{x-1}=27^x\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Rewrite both sides using base \(3\).</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(8^{-x+14}=16^x\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Convert both bases to powers of \(2\).</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(4^x=\dfrac{1}{\sqrt{2}}\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Write the radical using exponents and use base \(2\).</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(9^x=\dfrac{1}{\sqrt[3]{3}}\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Use rational exponents on the right side.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p>\(7^{\cfrac{x-2}{6}}=\sqrt{7}\)</p>
+                                <div class="solution space-xxxxl">
+                                    <p class="muted">Rewrite the square root as \(7^{1/2}\).</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning" role="note" aria-labelledby="limits-h">
+                <h3 id="limits-h">A natural next question</h3>
+                <p>
+                    Equations such as \(4=2^x\) are easily solved because we can match the <span class="blanked"
+                        aria-label="blank for note-taking">bases</span> on each side of the equation. But what about an
+                    equation
+                    like
+                    \(5=2^x\)?
+                </p>
+                <p>
+                    We could estimate the solution by trial and error, but to solve it exactly we will need a new
+                    concept that we are going to learn later in the chapter: logarithms.
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

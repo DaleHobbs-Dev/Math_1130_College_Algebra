@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Inverse Functions</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="inverse-functions" class="content" role="main">
+        <header class="page-header">
+            <h1>Inverse Functions</h1>
+        </header>
+
+        <section aria-labelledby="intro-inverse-h">
+            <h2 id="intro-inverse-h">Understanding Inverse Functions</h2>
+
+            <p>
+                Many real-life actions have reverses. For example:
+            </p>
+
+            <ul>
+                <li>Opening a window → <span class="blanked"></span> the window</li>
+                <li>Picking up a book → <span class="blanked"></span> the book and <span class="blanked"></span> the
+                    room
+                </li>
+            </ul>
+
+            <p>
+                Mathematical processes can also be reversed.
+            </p>
+
+            <div class="example">
+                <p>
+                    The inverse of “multiply by 2 then add 5” is:
+                </p>
+                <p><span class="blanked"></span> by 5, then <span class="blanked"></span> by 2.</p>
+                <div class="solution space-md"></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="inverse-def-h">
+            <h2 id="inverse-def-h">Definition and Visual Meaning</h2>
+
+            <div class="definition">
+                <h3>Inverse Function</h3>
+                <p>
+                    If \(f\) is a function, its inverse is \(f^{-1}\), where:
+                </p>
+                <p>\(f(f^{-1}(x))=x\) and \(f^{-1}(f(x))=x\)</p>
+            </div>
+
+            <div class="example">
+                <p>Draw the inverse of a function from its graph and state domain and range.</p>
+
+                <figure>
+                    <img src="images/inverse-graph-placeholder.png"
+                        alt="Graph of a function used to sketch its inverse.">
+                    <figcaption>Graph used to visualize inverse functions.</figcaption>
+                </figure>
+
+                <div class="solution space-xxxxl"></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="one-to-one-h">
+            <h2 id="one-to-one-h">One-to-One Functions</h2>
+
+            <p>
+                Only <span class="blanked"></span> functions have inverses.
+            </p>
+
+            <div class="definition">
+                <h3>One-to-One Function</h3>
+                <p>
+                    A function where each input corresponds to exactly one unique output.
+                </p>
+            </div>
+
+            <div class="example">
+                <p>Determine if each function is one-to-one and find its inverse if possible.</p>
+
+                <div class="solution space-xxxxl"></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="inverse-properties-h">
+            <h2 id="inverse-properties-h">Properties of Inverses</h2>
+
+            <div class="example">
+                <ol class="a-list">
+                    <li>
+                        <p>If \(f\) has domain \(D\) and range \(R\), what are the domain and range of \(f^{-1}\)?</p>
+                        <div class="solution space-md"></div>
+                    </li>
+                    <li>
+                        <p>If \((a,b)\) is on \(f\), what point is on \(f^{-1}\)?</p>
+                        <div class="solution space-md"></div>
+                    </li>
+                    <li>
+                        <p>Explain the difference between \(f^{-1}(x)\) and \(f(x)^{-1}\).</p>
+                        <div class="solution space-md"></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section aria-labelledby="steps-h">
+            <h2 id="steps-h">Steps to Find an Inverse</h2>
+
+            <ol>
+                <li>Replace \(f(x)\) with \(y\)</li>
+                <li>Swap \(x\) and \(y\)</li>
+                <li>Solve for \(y\)</li>
+                <li>Rewrite as \(f^{-1}(x)\)</li>
+            </ol>
+
+            <div class="example">
+                <p>Find the inverse and graph both functions.</p>
+
+                <figure>
+                    <img src="images/inverse-grid-placeholder.png" alt="Grid for graphing a function and its inverse.">
+                    <figcaption>Graph both the function and its inverse.</figcaption>
+                </figure>
+
+                <div class="solution space-xxxxl"></div>
+            </div>
+
+            <div class="example">
+                <p>Find the inverse for given domain restrictions.</p>
+                <div class="solution space-xl"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

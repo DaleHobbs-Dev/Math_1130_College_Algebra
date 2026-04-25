@@ -19,6 +19,17 @@ function replaceBlanksForPrint() {
             el.style.display = 'block';
         }
     });
+
+    document.querySelectorAll('.blank-space').forEach(el => {
+        el.setAttribute('data-original-html', el.innerHTML);
+        el.setAttribute('aria-label', 'Blank');
+        el.textContent = '';
+    });
+
+    document.querySelectorAll('.solution').forEach(el => {
+        el.setAttribute('data-original-html', el.innerHTML);
+        el.innerHTML = '';
+    });
 }
 
 function restoreOriginalText() {
@@ -31,6 +42,23 @@ function restoreOriginalText() {
             el.classList.remove('print-underscore');
             el.style.whiteSpace = '';
             el.style.display = '';
+        }
+    });
+
+    document.querySelectorAll('.blank-space').forEach(el => {
+        const originalHTML = el.getAttribute('data-original-html');
+        if (originalHTML !== null) {
+            el.innerHTML = originalHTML;
+            el.removeAttribute('aria-label');
+            el.removeAttribute('data-original-html');
+        }
+    });
+
+    document.querySelectorAll('.solution').forEach(el => {
+        const originalHTML = el.getAttribute('data-original-html');
+        if (originalHTML !== null) {
+            el.innerHTML = originalHTML;
+            el.removeAttribute('data-original-html');
         }
     });
 }

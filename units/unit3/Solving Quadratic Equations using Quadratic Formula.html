@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Solving Quadratic Equations using Quadratic Formula (Math 1130)</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="section-solving-quadratics" class="content" role="main">
+        <header class="page-header">
+            <h1>Solving Quadratic Equations using the Quadratic Formula</h1>
+        </header>
+
+        <section aria-labelledby="quadratic-definition-heading">
+            <h2 id="quadratic-definition-heading">What Is a Quadratic Equation?</h2>
+
+            <div class="definition" role="note" aria-labelledby="quadratic-definition-title">
+                <h3 id="quadratic-definition-title">Definition</h3>
+                <p>
+                    A <span class="blanked" aria-label="blank for quadratic equation">quadratic equation</span>
+                    is any equation that can be written in the form
+                </p>
+                <p class="text-center">\[
+                    ax^2+bx+c=0
+                    \]</p>
+                <p>where \(a\neq 0\).</p>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="quad-note-a-heading">
+                <h3 id="quad-note-a-heading">Note</h3>
+                <p>
+                    Why can \(a\) not be \(0\)? What would happen? We would just have
+                    \(bx+c=0\), which would be a
+                    <span class="blanked" aria-label="blank for linear">linear</span> equation.
+                    Quadratic comes from the fact that the highest variable power is \(2\).
+                </p>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="quad-note-solutions-heading">
+                <h3 id="quad-note-solutions-heading">Note</h3>
+                <p>
+                    Quadratic equations can have at most \(2\) solutions, but they can also have
+                    \(1\) solution or even \(0\) real solutions. This is best seen when graphing.
+                </p>
+                <p class="muted">Space below for example parabolas showing visually \(0\), \(1\), or \(2\) solutions.
+                </p>
+                <div class="solution space-xxxxl" aria-label="Space for graph sketches of parabolas"></div>
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section aria-labelledby="form-ac-heading">
+            <h2 id="form-ac-heading">Quadratics of the Form \(ax^2+c=0\)</h2>
+
+            <p>
+                If the linear \(bx\) part is missing from the quadratic, these are some of the simpler ones to solve.
+                You can move everything away from the \(x^2\) term and then, last, take the square root of both sides.
+                There is a trick, though, to ensure you get both the positive and negative square roots as solutions:
+                whenever you take the square root of both sides of an equation, remember to include both the \(+\) and
+                \(-\) versions of the root.
+            </p>
+            <p>Examples of solutions using the square root property: \(x^2=16\) would give \(x=\pm 4\). A problem like
+                \(x^2=11\) would give \(x=\pm \sqrt{11}\).</p>
+            <div class="example" aria-labelledby="sqrt-property-heading">
+                <h3 id="sqrt-property-heading">
+                    <span class="example-number">Example</span>
+                </h3>
+                <p>Solve the following quadratic equations using the square root property.</p>
+
+                <div class="row g-3" aria-label="Square root property practice">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\[
+                                    x^2=81
+                                    \]</p>
+                                <div class="solution space-xxl" aria-label="Solution space for x squared equals 81">
+                                </div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    x^2=23
+                                    \]</p>
+                                <div class="solution space-xxl" aria-label="Solution space for x squared equals 23">
+                                </div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    x^2-20=0
+                                    \]</p>
+                                <div class="solution space-xxl"
+                                    aria-label="Solution space for x squared minus 20 equals 0"></div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="3">
+                            <li>
+                                <p>\[
+                                    2x^2-10=0
+                                    \]</p>
+                                <div class="solution space-xxxl"
+                                    aria-label="Solution space for 2x squared minus 10 equals 0"></div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    (x+6)^2=4
+                                    \]</p>
+                                <div class="solution space-xxxl"
+                                    aria-label="Solution space for quantity x plus 6 squared equals 4"></div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    2(x-11)^2+5=21
+                                    \]</p>
+                                <div class="solution space-xxl"
+                                    aria-label="Solution space for 2 times quantity x minus 11 squared plus 5 equals 21">
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section aria-labelledby="general-form-heading">
+            <h2 id="general-form-heading">Quadratics of the Form \(ax^2+bx+c=0\)</h2>
+            <p>
+                Any other quadratic, you will have to solve with one of the following methods given
+                in the order you should try them:
+            </p>
+            <div class="important" role="note" aria-labelledby="methods-heading">
+                <h3 id="methods-heading">Suggested Order of Methods</h3>
+                <p>
+                    <strong>1st — Try to factor first!</strong> If you can get it into factors, these are the nicest
+                    ones,
+                    and then you set each factor equal to
+                    <span class="blanked" aria-label="blank for zero">zero</span>
+                    in order to finish solving.
+                </p>
+                <p>
+                    <strong>2nd — If you can’t factor,</strong> then identify the \(a\), \(b\), and \(c\) values and use
+                    the
+                    <span class="blanked" aria-label="blank for quadratic formula">quadratic</span> formula,
+                    a formula you <strong>SHOULD</strong> memorize.
+                </p>
+                <p class="text-center">
+                    <span class="formula-screen">
+                        \[
+                        x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+                        \]
+                    </span>
+                    <span class="space-xxxl formula-print blanked" aria-label="quadratic formula"></span>
+                </p>
+                <p>
+                    This formula is powerful in that it will solve
+                    <span class="blanked" aria-label="blank for any">any</span>
+                    quadratic equation, no matter what its constants are.
+                </p>
+                <p>
+                    <strong>3rd — Completing the square.</strong> In practice, there is no step you will try after step
+                    2
+                    in this section, but there is another method that will solve any quadratic equation:
+                    completing the square. We mention it here because it has practical uses later in Calculus.
+                </p>
+            </div>
+
+            <div class="example" aria-labelledby="quad-formula-example-heading">
+                <h3 id="quad-formula-example-heading">
+                    <span class="example-number">Example</span>
+                </h3>
+                <p>Solve the following quadratic equations using the Quadratic Formula.</p>
+
+                <div class="row g-3" aria-label="Quadratic formula practice">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\[
+                                    x^2+7x+4=0
+                                    \]</p>
+                                <div class="solution space-xxxl"
+                                    aria-label="Solution space for x squared plus 7x plus 4 equals 0"></div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    x^2-13=5x
+                                    \]</p>
+                                <div class="solution space-xxxxl"
+                                    aria-label="Solution space for x squared minus 13 equals 5x"></div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    10m^2-2m=3
+                                    \]</p>
+                                <div class="solution space-xxxxl"
+                                    aria-label="Solution space for 10m squared minus 2m equals 3"></div>
+                            </li>
+                            <li>
+                                <p>\[
+                                    \frac{x^2}{10}-\frac{x}{5}=1
+                                    \]</p>
+                                <p class="muted">(Hint: get rid of fractions to make this simpler to deal with.)</p>
+                                <div class="solution space-xxxxl"
+                                    aria-label="Solution space for x squared over 10 minus x over 5 equals 1"></div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

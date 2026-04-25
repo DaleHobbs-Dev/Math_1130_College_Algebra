@@ -70,6 +70,9 @@ ol.a-list {
 ol.a-list li {
   margin: 0.25rem 0;
 }
+.a-list li > p {
+  margin-bottom: 0.25rem;
+}
 
 /* =============================================================================
    LINKS & ACCESSIBILITY
@@ -195,6 +198,14 @@ figcaption {
   background-color: #fff;
 }
 
+.definition h3 {
+  color: var(--color-blue);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 2px;
+  margin-bottom: 0.4rem;
+}
+
 /* Shared left-accent base for all other callout types */
 .example,
 .solution,
@@ -215,7 +226,7 @@ figcaption {
 }
 .solution {
   border-left: none;
-  min-height: 3rem;
+  min-height: 0.5rem;
 }
 .theorem {
   border-left-color: var(--color-blue);
@@ -326,6 +337,77 @@ th {
 }
 
 /* =============================================================================
+   T-Chart tables: side-by-side table and graph
+   ============================================================================= */
+
+/* T-chart layout: table on left, graph on right */
+.tchart-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.tchart-layout > figure {
+  margin: 0;
+}
+
+/* Keep the table compact */
+.tchart-figure {
+  flex: 0 0 220px;
+  max-width: 220px;
+}
+
+/* Let the graph take the remaining room */
+.tchart-graph {
+  flex: 1 1 320px;
+}
+
+/* T-chart table formatting */
+.tchart-table {
+  width: auto;
+  min-width: 160px;
+  table-layout: fixed;
+}
+
+.tchart-table th,
+.tchart-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tchart-table th {
+  white-space: nowrap;
+}
+
+/* Optional: keep columns narrow and even */
+.tchart-table col {
+  width: 50%;
+}
+
+.tchart-graph img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Nice responsive behavior on smaller screens */
+@media (max-width: 768px) {
+  .tchart-layout {
+    display: block;
+  }
+
+  .tchart-figure,
+  .tchart-graph {
+    max-width: 100%;
+  }
+
+  .tchart-figure {
+    margin-bottom: 1rem;
+  }
+}
+
+/* =============================================================================
    INLINE UTILITIES
    ============================================================================= */
 
@@ -352,6 +434,29 @@ th {
 }
 .blanked--xl {
   min-width: 12rem;
+}
+
+/* Inline blank space for note-taking — like .blanked but without underline */
+.blank-space {
+  display: inline-block;
+  min-width: 1rem;
+}
+
+/* Size variants (match your spacing system) */
+.blank-space--sm {
+  min-height: 1.5rem;
+}
+
+.blank-space--md {
+  min-height: 3rem;
+}
+
+.blank-space--lg {
+  min-height: 5rem;
+}
+
+.blank-space--xl {
+  min-height: 7rem;
 }
 
 /* Inline monospace code block */
@@ -413,6 +518,13 @@ th {
   margin-bottom: 9rem;
 }
 
+/* Print version of formulas — hidden on screen, shown when printing */
+.formula-print {
+  display: none;
+  min-width: 250px;
+  height: 1.5em;
+}
+
 /* =============================================================================
    PRINT
    ============================================================================= */
@@ -422,10 +534,35 @@ th {
   page-break-before: always;
 }
 
+/* =============================================================================
+   FUNCTION TABLES
+   ============================================================================= */
+
+.function-table {
+  width: auto;
+  margin: 0 auto;
+}
+
+.function-table th,
+.function-table td {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 2.5rem;
+}
+
+@page {
+  margin: 0.5in;
+}
+
 @media print {
+  /* ==========================================================================
+     Base print cleanup
+     ========================================================================== */
   body {
     color: #000;
     background: #fff;
+    margin: 0;
+    font-size: 13px;
   }
 
   a {
@@ -434,6 +571,7 @@ th {
   }
 
   .page-break {
+    break-before: page;
     page-break-before: always;
   }
 
@@ -442,46 +580,213 @@ th {
     background: none;
   }
 
-  /* Keep Bootstrap grid columns in print */
+  /* ==========================================================================
+     Headings / text flow
+     ========================================================================== */
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  p,
+  li,
+  figcaption {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Keep figures/captions together when possible */
+  figure,
+  table,
+  caption,
+  figcaption {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ==========================================================================
+     Bootstrap-style grid in print
+     ========================================================================== */
   .row {
     display: flex !important;
     flex-wrap: wrap !important;
   }
 
-  /* Force 2-column layout for .col-md-6 */
+  .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
   .col-md-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
 
-  .row,
-  .col-12,
-  .col-md-6,
-  figure {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Tighten Bootstrap gutters for paper */
+  /* Tighten gutters for paper */
   .g-3 {
     --bs-gutter-x: 0.75rem !important;
     --bs-gutter-y: 0.5rem !important;
   }
 
-  /* Normalize image widths for print */
+  /* Allow normal flow unless a block is explicitly protected */
+  .row,
+  .col-12,
+  .col-md-6 {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Prevent individual grid items from splitting awkwardly */
+  .row > .col-12,
+  .row > .col-md-6 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ==========================================================================
+     Images
+     ========================================================================== */
+  img,
+  svg,
+  canvas,
+  video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Only normalize standalone helper-sized images */
   .img-downsized,
   .img-small,
   .img-medium,
   .img-large {
-    width: 60%;
-    max-width: none;
+    height: auto !important;
   }
 
-  /* Prevent list items from splitting across pages */
-  ol.a-list > li,
-  .row > * {
+  .img-small {
+    width: 40% !important;
+    max-width: none !important;
+  }
+
+  .img-medium {
+    width: 60% !important;
+    max-width: none !important;
+  }
+
+  .img-large {
+    width: 80% !important;
+    max-width: none !important;
+  }
+
+  /* ==========================================================================
+     Lists / examples / callouts
+     ========================================================================== */
+  ol.a-list > li {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .definition,
+  .example,
+  .theorem,
+  .proof,
+  .note,
+  .warning,
+  .important {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Let very tall solution areas flow naturally if needed */
+  .solution {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* ==========================================================================
+     Formula visibility
+     ========================================================================== */
+  .formula-screen {
+    display: none !important;
+  }
+
+  .formula-print {
+    display: inline-block !important;
+    border-bottom: 2px solid #000;
+  }
+
+  /* ==========================================================================
+     T-chart print layout
+     ========================================================================== */
+  .tchart-layout {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .tchart-layout > figure {
+    margin: 0 !important;
+  }
+
+  .tchart-figure {
+    flex: 0 0 200px !important;
+    max-width: 200px !important;
+    min-width: 180px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .tchart-graph {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .tchart-graph img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .tchart-table {
+    width: 100% !important;
+    table-layout: fixed;
+  }
+
+  .tchart-table th,
+  .tchart-table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  /* ==========================================================================
+     Utility print helpers you can start using in notes
+     ========================================================================== */
+  .print-keep {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-break-before {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .print-break-after {
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  .print-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
   }
 }
 

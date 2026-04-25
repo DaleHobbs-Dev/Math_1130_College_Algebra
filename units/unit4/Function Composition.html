@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Function Composition</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="composite-functions" class="content" role="main">
+        <header class="page-header">
+            <h1>Composite Functions</h1>
+        </header>
+
+        <section aria-labelledby="composition-h">
+            <h2 id="composition-h">Function Composition</h2>
+            <div class="definition">
+                <h3>Definition</h3>
+                <p>Let \(f\) and \(g\) be functions. We define the composition of \(f\) and \(g\) as:</p>
+                <p>\[(f\circ g)(x)=f(g(x))\]</p>
+            </div>
+            <p>
+                The composition \((f \circ g)(x)=f(g(x))\) means we input the output of one function into another. This
+                is best observed through examples and visual representations showing how the two functions interact.
+            </p>
+
+            <div class="example">
+                <h3><span class="example-number">Example <span class="example-number__index">1</span></span></h3>
+                <p>Draw mapping diagrams for \(f\) and \(g\), then determine \((f \circ g)(x)\).</p>
+
+                <div class="solution space-xxl">
+                    <p class="muted">Use this space for mapping diagrams and evaluation.</p>
+                </div>
+            </div>
+
+            <div class="example" aria-labelledby="comp-table-ex-h">
+                <h3 id="comp-table-ex-h">
+                    <span class="example-number">Example <span class="example-number__index">2</span></span>
+                </h3>
+                <p>Use the tables below to evaluate compositions.</p>
+
+                <figure aria-labelledby="comp-tables-cap">
+                    <div class="row g-3" aria-label="Tables of values for functions f and g">
+                        <div class="col-12 col-md-6">
+                            <table class="function-table">
+                                <caption class="sr-only">Table of values for the function f</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">\(x\)</th>
+                                        <th scope="col">\(-1\)</th>
+                                        <th scope="col">\(0\)</th>
+                                        <th scope="col">\(1\)</th>
+                                        <th scope="col">\(2\)</th>
+                                        <th scope="col">\(3\)</th>
+                                        <th scope="col">\(4\)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">\(f(x)\)</th>
+                                        <td>\(0\)</td>
+                                        <td>\(-1\)</td>
+                                        <td>\(7\)</td>
+                                        <td>\(-1\)</td>
+                                        <td>\(2\)</td>
+                                        <td>\(0\)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <table class="function-table">
+                                <caption class="sr-only">Table of values for the function g</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">\(x\)</th>
+                                        <th scope="col">\(-1\)</th>
+                                        <th scope="col">\(0\)</th>
+                                        <th scope="col">\(1\)</th>
+                                        <th scope="col">\(2\)</th>
+                                        <th scope="col">\(3\)</th>
+                                        <th scope="col">\(4\)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">\(g(x)\)</th>
+                                        <td>\(-5\)</td>
+                                        <td>\(-1\)</td>
+                                        <td>\(0\)</td>
+                                        <td>\(1\)</td>
+                                        <td>\(4\)</td>
+                                        <td>\(5\)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <figcaption id="comp-tables-cap">
+                        Tables of values for \(f\) and \(g\), used to evaluate compositions.
+                    </figcaption>
+                </figure>
+
+                <ol class="a-list" aria-label="Composition problems from tables">
+                    <li>
+                        <p>\((g\circ f)(0)=g(f(\,\phantom{0}\,))=\)
+                        <div class="solution"></div>
+                        </p>
+
+                    </li>
+                    <li>
+                        <p>\((f\circ g)(2)=\)
+                        <div class="solution"></div>
+                        </p>
+
+                    </li>
+                    <li>
+                        <p>\((g\circ g)(1)=\)
+                        <div class="solution"></div>
+                        </p>
+
+                    </li>
+                    <li>
+                        <p>\((f\circ g)(4)=\)
+                        <div class="solution"></div>
+                        </p>
+
+                    </li>
+                </ol>
+            </div>
+
+            <div class="example">
+                <h3><span class="example-number">Example <span class="example-number__index">3</span></span></h3>
+                <p>Use the graphs of \(f\) and \(g\) to answer composition questions.</p>
+
+                <figure aria-labelledby="graph-comp-cap">
+                    <img src="images/composition_graphs.jpg"
+                        alt="Graph of functions f and g. See detailed description below.">
+
+                    <figcaption id="graph-comp-cap">
+                        Graphs of two functions \(f\) and \(g\) used to evaluate compositions.
+                    </figcaption>
+
+                    <details>
+                        <summary>Accessible description of the graph</summary>
+                        <div class="sr-only">
+                            The graph shows two functions, f and g, plotted on the same coordinate plane.
+
+                            The function g is a smooth curve (colored differently from f) that passes through the
+                            following labeled
+                            points:
+                            (-1, 3), (1, 4), (2, 2), (3, 1), (4, 2), (5, 4), (6, 5), and (7, 5).
+                            The graph of g rises to a local maximum near x = 1, decreases to a minimum near x = 3, then
+                            increases again
+                            and levels off near y = 5 for x-values between 6 and 7.
+
+                            The function f is a piecewise linear graph forming a V-like shape.
+                            It passes through the labeled points (-1, 1), (1, -1), (2, -2), (4, 0), (5, 1), and (6, 2).
+                            The graph of f decreases from left to right until it reaches a minimum at (2, -2), then
+                            increases steadily
+                            afterward.
+
+                            The graph is used to evaluate compositions such as g(f(x)) and f(g(x)) by first locating a
+                            value on one
+                            function and then using that output as the input to the other function.
+                        </div>
+                    </details>
+                </figure>
+                <ol class="a-list" aria-label="Composition problems from tables">
+                    <li>
+                        <p>\((g\circ f)(-1)=\)</p>
+                        <div class="solution space-xs"></div>
+                    </li>
+                    <li>
+                        <p>\((f\circ g)(5)=\)</p>
+                        <div class="solution space-xs"></div>
+                    </li>
+                    <li>
+                        <p>\((f\circ f)(1)=\)</p>
+                        <div class="solution space-xs"></div>
+                    </li>
+                    <li>
+                        <p>\((g\circ g)(5)=\)</p>
+                        <div class="solution space-xs"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="note">
+                <h3>How Algebraic Composition Works</h3>
+                <p>
+                    If \(f(x)=2x+3\), then:
+                </p>
+                <ul>
+                    <li>
+                        <p>\(f(2)=\)</p>
+                    </li>
+                    <li>
+                        <p>\(f(p)=\)</p>
+                    </li>
+                    <li>
+                        <p>\(f(g(x))=\)</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h3><span class="example-number">Example <span class="example-number__index">4</span></span></h3>
+                <p>Let \(f(x) = 5x^2+5\) and \(g(x)=3x\) be given. Find \(f(g(x))\) and \(g(f(x))\). Are these two
+                    compositions equal?</p>
+                <div class="solution space-xxxxl"></div>
+            </div>
+
+            <div class="example">
+                <h3><span class="example-number">Example <span class="example-number__index">5</span></span></h3>
+                <p>Let \(f(x) = 6x-3\) and \(g(x)=\dfrac{x+3}{6}\). Find the following compositions:</p>
+                <ol class="a-list">
+                    <li>
+                        <p>\(f(g(x))=\)</p>
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>
+                        <p>Find the value for \(f(g(2))=\)</p>
+                        <div class="solution space-sm"></div>
+                    </li>
+                    <li>
+                        <p>\(g(f(x))=\)</p>
+                        <div class="solution space-xl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="example">
+                <h3><span class="example-number">Example <span class="example-number__index">6</span></span></h3>
+                <p>The regular price of a computer is \(x\) dollars. Let \(f(x)=x-400\) and \(g(x)=0.75x\). Using these
+                    two functions, complete the parts below. (Hint: \(0.75x\) is a reduction of \(1x-0.25x\) which may
+                    help with understanding this function.)</p>
+
+                <ol class="a-list">
+                    <li>
+                        <p>Describe what \(f\) and \(g\) model in terms of price of a computer.</p>
+                        <div class="solution space-xxl"></div>
+                    </li>
+                    <li>
+                        <p>Find \(f(g(x))\) and describe what this models in terms of a computer's price.</p>
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>
+                        <p>Find \(g(f(x))\) and describe what this models in terms of a computer's price.</p>
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>
+                        <p>Which composition gives the greater discount?</p>
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>

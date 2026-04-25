@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Algebra — Graphing Quadratic Equations (Math 1130)</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="../../shared/css/mathstyles.css">
+
+</head>
+
+<body>
+    <main id="section-graphing-quadratics" class="content" role="main">
+        <header class="page-header">
+            <h1>Graphing Quadratic Equations</h1>
+        </header>
+
+        <section aria-labelledby="intro-graph-heading">
+            <h2 id="intro-graph-heading">What Does a Quadratic Graph Look Like?</h2>
+
+            <p>
+                Graphs of functions of the form \(f(x)=ax^2+bx+c\) take on the shape of a
+                <span class="blanked" aria-label="blank for parabola">parabola</span>.
+            </p>
+
+            <div class="solution space-xxxxl" aria-label="Space for sketching parabola shapes">
+            </div>
+        </section>
+
+        <section aria-labelledby="strategy-heading">
+            <h2 id="strategy-heading">Strategy for Graphing</h2>
+
+            <div class="important" role="note" aria-labelledby="steps-heading">
+                <h3 id="steps-heading">Steps</h3>
+                <ol>
+                    <li>
+                        Find the
+                        <span class="blanked" aria-label="blank for vertex">vertex</span>
+                        of the graph. The \(x\)-value is given by
+                        \[
+                        x=\frac{-b}{2a}.
+                        \]
+                    </li>
+                    <li>
+                        Find the \(y\)-value of the vertex by plugging this value back into the original function.
+                    </li>
+                    <li>
+                        Use a T-chart to generate one or two additional points on one side of the vertex.
+                    </li>
+                    <li>
+                        Plot the vertex and your additional point(s), then
+                        <span class="blanked" aria-label="blank for reflect">reflect</span>
+                        the points across the axis of symmetry to complete the graph.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="symmetry-heading">
+                <h3 id="symmetry-heading">Key Idea</h3>
+                <p>
+                    Every parabola is symmetric about a vertical line called the axis of symmetry.
+                    This is why we only need to find points on one side and reflect them.
+                </p>
+            </div>
+        </section>
+        <div class="page-break"></div>
+        <section aria-labelledby="example-heading">
+            <div class="example" aria-labelledby="example1-heading">
+                <h3 id="example1-heading">
+                    <span class="example-number">Example</span>
+                </h3>
+
+                <p>For the following function, find:</p>
+                <ul>
+                    <li>How the graph opens</li>
+                    <li>The vertex</li>
+                    <li>Any \(x\)-intercepts or \(y\)-intercepts</li>
+                    <li>The graph of the function</li>
+                </ul>
+
+                <p class="text-center">\[
+                    f(x)=x^2-4x-5
+                    \]</p>
+
+                <div class="solution space-xxxxl" aria-label="Graphing work area with coordinate plane">
+                    <img src="images/coordinate-plane.jpg" class="img-medium"
+                        alt="Blank coordinate plane for graphing a quadratic function">
+                </div>
+            </div>
+            <div class="page-break"></div>
+            <div class="example" aria-labelledby="example2-heading">
+                <h3 id="example2-heading">
+                    <span class="example-number">Example</span>
+                </h3>
+                <p>For the following function, find:</p>
+                <ul>
+                    <li>How the graph opens</li>
+                    <li>The vertex</li>
+                    <li>Any \(x\)-intercepts or \(y\)-intercepts</li>
+                    <li>The graph of the function</li>
+                </ul>
+
+                <p class="text-center">\[
+                    f(x)=-x^2+4x+3
+                    \]</p>
+                <div class="solution space-xxxxl" aria-label="Additional graphing workspace">
+                    <img src="images/coordinate-plane.jpg" class="img-medium"
+                        alt="Blank coordinate plane for completing the parabola graph">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="../../shared/js/main.js"></script>
+</body>
+
+</html>
