@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Algebra — Example Unit Outline (Math 1130)</title>
+    <title>College Algebra — Logarithmic Functions and Equations (Math 1130)</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,8 +17,440 @@
 </head>
 
 <body>
-    <main id="unit-1" class="content" role="main">
+    <main id="logarithmic-functions-equations" class="content" role="main">
+        <header class="page-header">
+            <h1>Logarithmic Functions and Equations</h1>
+        </header>
+        <section aria-labelledby="log-functions-h">
+            <h2 id="log-functions-h">Logarithmic Functions</h2>
+            <p>
+                Take a look back at the graph of \(y=a^x\), specifically when \(a&gt;1\), and notice some of its
+                features
+                once more.
+                We will use one special fact about this function as motivation for today&rsquo;s lecture.
+            </p>
 
+            <div class="solution space-xxxxl" aria-label="Space to review the graph of an exponential function">
+                <p class="muted">Use this space to review the graph of \(y=2^x\) and its one-to-one behavior.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="logarithm-h">
+            <h2 id="logarithm-h">The Logarithm</h2>
+
+            <p>
+                Since exponential functions are
+                <span class="blanked" aria-label="blank for note-taking">one-to-one</span>,
+                then we know that there must exist an
+                <span class="blanked" aria-label="blank for note-taking">inverse</span>
+                function for them.
+                What exactly does this look like? Take the function \(y=2^x\), and use it to sketch the graph of its
+                inverse to get a feel for what this new function looks like.
+            </p>
+
+            <div class="example" aria-labelledby="inverse-tchart-h">
+                <h3 id="inverse-tchart-h">
+                    <span class="example-number">Example <span class="example-number__index">1</span></span>
+                </h3>
+                <p>Complete the tables for \(y=2^x\) and its inverse, then sketch both graphs.</p>
+
+                <div class="tchart-layout"
+                    aria-label="Tables and graphing grid for an exponential function and its inverse">
+                    <figure class="tchart-figure" aria-labelledby="exp-table-cap">
+                        <table class="tchart-table">
+                            <caption id="exp-table-cap">Table for \(y=2^x\)</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">\(x\)</th>
+                                    <th scope="col">\(y=2^x\)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\(-3\)</td>
+                                    <td><span class="blank-space"
+                                            aria-label="blank for note-taking">\(\frac{1}{8}\)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>\(-2\)</td>
+                                    <td><span class="blank-space"
+                                            aria-label="blank for note-taking">\(\frac{1}{4}\)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>\(-1\)</td>
+                                    <td><span class="blank-space"
+                                            aria-label="blank for note-taking">\(\frac{1}{2}\)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>\(0\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(1\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(1\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(2\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(2\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(4\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(3\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(8\)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+
+                    <figure class="tchart-figure" aria-labelledby="inv-table-cap">
+                        <table class="tchart-table">
+                            <caption id="inv-table-cap">Table for the inverse of \(y=2^x\)</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">\(x\)</th>
+                                    <th scope="col">\(y\)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\(\frac{1}{8}\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(-3\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(\frac{1}{4}\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(-2\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(\frac{1}{2}\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(-1\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(1\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(0\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(2\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(1\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(4\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(2\)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>\(8\)</td>
+                                    <td><span class="blank-space" aria-label="blank for note-taking">\(3\)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figure>
+
+                    <figure class="tchart-graph" aria-labelledby="log-grid-cap">
+                        <img src="images/loggraph.jpg" class="img-small"
+                            alt="Blank coordinate grid from x equals negative 1 to 10 and y equals negative 10 to 7 for graphing an exponential function and its logarithmic inverse.">
+                        <figcaption id="log-grid-cap">
+                            Grid for graphing \(x=2^y\), a logarithmic function.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <p>
+                This inverse function is what we call a logarithm.
+            </p>
+
+            <div class="definition" role="note" aria-labelledby="log-def-h">
+                <h3 id="log-def-h">Definition</h3>
+                <p>
+                    A logarithmic function with base \(a\), where \(a&gt;0\) and \(a\neq 1\), is denoted by
+                </p>
+                <p class="cstate-math">\[y=\log_a(x)\]</p>
+                <p>
+                    This is read as “\(y\) equals the logarithm, base
+                    <span class="blanked" aria-label="blank for note-taking">\(a\)</span>,
+                    of
+                    <span class="blanked" aria-label="blank for note-taking">\(x\)</span>.”
+                </p>
+                <p>
+                    It is defined by the equivalent equation
+                </p>
+                <p class="cstate-math">\[x=a^y\]</p>
+                <p>
+                    This means that the logarithm itself is the
+                    <span class="blanked" aria-label="blank for note-taking">exponent</span>
+                    you raise the base to in order to achieve some value \(x\).
+                </p>
+            </div>
+
+            <div class="note" role="note" aria-labelledby="log-note-h">
+                <h3 id="log-note-h">Note</h3>
+                <p>
+                    The form \(x=a^y\), while defining the logarithm, is not in the “input-output” form we usually use.
+                    That is why we write \(y=\log_a(x)\), which looks like “input \(x\), output \(y\).”
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="two-forms-h">
+            <h2 id="two-forms-h">Two Forms of the Logarithm</h2>
+
+            <p>
+                When dealing with logarithmic equations and expressions, it is important to switch easily
+                between their logarithmic and exponential forms.
+            </p>
+
+            <div class="important" role="note" aria-labelledby="forms-rule-h">
+                <h3 id="forms-rule-h">Key Relationship</h3>
+                <p class="cstate-math">\(\log_a(N)=M\)</p>
+                <p>is equivalent to</p>
+                <p class="cstate-math">\(a^M=N\)</p>
+            </div>
+
+            <div class="example" aria-labelledby="log-to-exp-h">
+                <h3 id="log-to-exp-h">
+                    <span class="example-number">Example <span class="example-number__index">2</span></span>
+                </h3>
+                <p>Rewrite each logarithmic expression into its equivalent exponential form.</p>
+
+                <div class="row g-3" aria-label="Logarithmic expressions to rewrite in exponential form">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(3=\log_4(64)\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\(4^3=64\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(\log_2(32)=5\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\(2^5=32\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="3">
+                            <li>
+                                <p>\(\log(100)=2\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\(10^2=100\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(\log_{1.2}(m)=3\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\((1.2)^3=m\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example" aria-labelledby="exp-to-log-h">
+                <h3 id="exp-to-log-h">
+                    <span class="example-number">Example <span class="example-number__index">3</span></span>
+                </h3>
+                <p>Rewrite each expression into an equivalent form with the word “log.”</p>
+
+                <div class="row g-3" aria-label="Exponential expressions to rewrite in logarithmic form">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(5=2^x\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space"
+                                            aria-label="blank for note-taking">\(\log_2(5)=x\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(10^x=3\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\(\log(3)=x\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="3">
+                            <li>
+                                <p>\(e^7=T\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space" aria-label="blank for note-taking">\(\ln(T)=7\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(a^b=c\)</p>
+                                <div class="solution space-md">
+                                    <p><span class="blank-space"
+                                            aria-label="blank for note-taking">\(\log_a(c)=b\)</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="change-base-h">
+            <h2 id="change-base-h">Change of Base Formula</h2>
+
+            <p>
+                When solving equations, it is helpful to use a calculator to approximate solutions. Most calculators
+                handle
+                logarithms with base \(10\) or base \(e\), so the change of base formula lets us rewrite other
+                logarithms.
+            </p>
+
+            <div class="definition" role="note" aria-labelledby="cob-def-h">
+                <h3 id="cob-def-h">Change of Base Formula</h3>
+                <p class="cstate-math">\[\log_a(b)=\dfrac{\log_x(b)}{\log_x(a)}\]</p>
+                <p>
+                    You can choose a convenient base \(x\), usually base \(10\) or base \(e\).
+                </p>
+            </div>
+
+            <div class="example" aria-labelledby="cob-example-h">
+                <h3 id="cob-example-h">
+                    <span class="example-number">Example <span class="example-number__index">4</span></span>
+                </h3>
+                <p>
+                    Rewrite \(\log_3(10)\) using the change of base formula so you can estimate it on a calculator.
+                    Write it with both base \(10\) and base \(e\).
+                </p>
+
+                <div class="row g-3" aria-label="Change of base using base ten and base e">
+                    <div class="col-12 col-md-6">
+                        <p><strong>Base 10:</strong></p>
+                        <p>
+                            \(\log_3(10)=\)
+                            <span class="blank-space" aria-label="blank for note-taking">
+                                \(\dfrac{\log(10)}{\log(3)}\)
+                            </span>
+                        </p>
+                        <div class="solution space-md"></div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <p><strong>Base \(e\):</strong></p>
+                        <p>
+                            \(\log_3(10)=\)
+                            <span class="blank-space" aria-label="blank for note-taking">
+                                \(\dfrac{\ln(10)}{\ln(3)}\)
+                            </span>
+                        </p>
+                        <div class="solution space-md"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example" aria-labelledby="estimate-log-h">
+                <h3 id="estimate-log-h">
+                    <span class="example-number">Example <span class="example-number__index">5</span></span>
+                </h3>
+                <p>Get an estimate for \(\log_3(10)\).</p>
+                <div class="solution space-lg" aria-label="Space to approximate log base three of ten">
+                    <p class="muted">Use the change of base formula and a calculator.</p>
+                </div>
+            </div>
+
+            <p>
+                Before solving equations, briefly look back at the graph of \(y=\log_a(x)\), where \(a&gt;1\), and note
+                its
+                domain.
+            </p>
+
+            <div class="solution space-xxxl" aria-label="Space to discuss the domain of logarithmic functions">
+                <p class="muted">Use this space to discuss why logarithmic functions require positive inputs.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="solving-log-h">
+            <h2 id="solving-log-h">Solving Equations Involving Logarithms</h2>
+
+            <p>
+                The domain is important because logarithms only accept
+                <span class="blanked" aria-label="blank for note-taking">positive numbers</span>
+                as valid inputs.
+            </p>
+
+            <p>
+                Because of this, it is important to check every solution to make sure you are not taking the logarithm
+                of
+                <span class="blanked" aria-label="blank for note-taking">zero or a negative number</span>.
+            </p>
+
+            <div class="example" aria-labelledby="solve-log-eq-h">
+                <h3 id="solve-log-eq-h">
+                    <span class="example-number">Example <span class="example-number__index">6</span></span>
+                </h3>
+                <p>
+                    Solve the following equations for \(x\). For answers with logarithms, write both the exact answer
+                    and
+                    the approximate answer.
+                </p>
+
+                <div class="row g-3" aria-label="Logarithmic and exponential equations to solve">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(\log(x)=3\)</p>
+                                <div class="solution space-xl"></div>
+                            </li>
+                            <li>
+                                <p>\(\log_x(125)=3\)</p>
+                                <div class="solution space-xxl"></div>
+                            </li>
+                            <li>
+                                <p>\(\log_8(8^4)=x\)</p>
+                                <div class="solution space-xxl"></div>
+                            </li>
+                            <li>
+                                <p>\(\ln(e^7)=x\)</p>
+                                <div class="solution space-l"></div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="5">
+                            <li>
+                                <p>\(5^x=17\)</p>
+                                <div class="solution space-xxxl">
+                                    <p class="muted">Use a calculator to estimate after rewriting with logarithms.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(6^{-x+1}=22\)</p>
+                                <div class="solution space-xxxl">
+                                    <p class="muted">Use change of base to estimate.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p>\(e^{0.08x}=4\)</p>
+                                <div class="solution space-xxxl"></div>
+                            </li>
+                            <li>
+                                <p>\(e^{2x+1}=4\)</p>
+                                <div class="solution space-l"></div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Scripts -->
     <script>

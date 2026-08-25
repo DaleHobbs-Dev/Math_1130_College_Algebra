@@ -21,124 +21,159 @@
         <header class="page-header">
             <h1>Inverse Functions</h1>
         </header>
-
         <section aria-labelledby="intro-inverse-h">
             <h2 id="intro-inverse-h">Understanding Inverse Functions</h2>
-
             <p>
                 Many real-life actions have reverses. For example:
             </p>
-
             <ul>
-                <li>Opening a window → <span class="blanked"></span> the window</li>
-                <li>Picking up a book → <span class="blanked"></span> the book and <span class="blanked"></span> the
-                    room
+                <li>Opening a window → <span class="blanked">closing</span> the window</li>
+                <li>Walking into a room and picking up a book → <span class="blanked">putting down</span> the book and
+                    <span class="blanked">leaving</span> the room
                 </li>
             </ul>
-
             <p>
                 Mathematical processes can also be reversed.
             </p>
-
             <div class="example">
                 <p>
                     The inverse of “multiply by 2 then add 5” is:
                 </p>
-                <p><span class="blanked"></span> by 5, then <span class="blanked"></span> by 2.</p>
+                <p><span class="blanked">subtract</span> 5, then <span class="blanked">divide</span> by 2.</p>
                 <div class="solution space-md"></div>
             </div>
         </section>
-
         <section aria-labelledby="inverse-def-h">
             <h2 id="inverse-def-h">Definition and Visual Meaning</h2>
-
             <div class="definition">
                 <h3>Inverse Function</h3>
                 <p>
-                    If \(f\) is a function, its inverse is \(f^{-1}\), where:
+                    If \(f\) is a function, its inverse is denoted \(f^{-1}\), where:
+                    \[f(f^{-1}(x))=x \text{ and } f^{-1}(f(x))=x\]
                 </p>
-                <p>\(f(f^{-1}(x))=x\) and \(f^{-1}(f(x))=x\)</p>
             </div>
-
             <div class="example">
-                <p>Draw the inverse of a function from its graph and state domain and range.</p>
-
+                <p>Draw the inverse of a function \(f\) using the information that \(f(a)=b\) (which means that
+                    \(f^{-1}(b)=a\) ).</p>
+                <div class="solution space-xxxxl">
+                    <p class="muted">Graphing area used to visualize inverse functions.</p>
+                </div>
+            </div>
+            <div class="example">
+                <p>Use the image below of a mapping \(f\) between state abbreviations and state names to draw an image
+                    of the inverse function.</p>
                 <figure>
-                    <img src="images/inverse-graph-placeholder.png"
-                        alt="Graph of a function used to sketch its inverse.">
-                    <figcaption>Graph used to visualize inverse functions.</figcaption>
+                    <img class="img-small" src="images/statemapping.png" alt="image of state mapping.">
+                    <figcaption>Graph of State Mapping to use for finding the inverse function mapping.</figcaption>
                 </figure>
-
-                <div class="solution space-xxxxl"></div>
+            </div>
+            <p>Just like real life phenomena that are not reversible, there are functions that are not reversible as
+                well. Observe the
+                following function and predict what you think the inverse function should behave like.</p>
+            <div class="example">
+                <p>In the space below we will draw two functions. One of them is reversible, and the other is not. See
+                    if you can tell which one has an inverse.</p>
+                <div class="solution space-xxxxl">
+                    <p class="muted">Graphing area used to visualize two functions.</p>
+                </div>
             </div>
         </section>
-
         <section aria-labelledby="one-to-one-h">
             <h2 id="one-to-one-h">One-to-One Functions</h2>
-
             <p>
-                Only <span class="blanked"></span> functions have inverses.
+                As we see from the example above, only <strong>one-to-one</strong> functions have inverses.
             </p>
-
             <div class="definition">
                 <h3>One-to-One Function</h3>
                 <p>
-                    A function where each input corresponds to exactly one unique output.
+                    A function is said to be <span class="blanked">one-to-one</span> if each input corresponds to a
+                    <span class="blanked">unique</span> output. That is to say, if we have two input values of \(x_1\)
+                    and \(x_2\) where \(x_1 \ne x_2\), then they correspond to different output values of \(y_1\) and
+                    \(y_2\) where \(y_1 \ne y_2\).
                 </p>
             </div>
-
             <div class="example">
-                <p>Determine if each function is one-to-one and find its inverse if possible.</p>
-
-                <div class="solution space-xxxxl"></div>
-            </div>
+                <p>Tell if the following functions are one-to-one. If they are, tell the inverse function (or draw it)
+                    for each one.</p>
+                <div class="row g-3" aria-label="Logarithmic expressions to rewrite in exponential form">
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list">
+                            <li>
+                                <p>\(\lbrace (-2,1),(-1,4),(2,9),(-10,0)\rbrace\)</p>
+                                <div class="solution space-md"></div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="img-small" src="images/onetoone1.jpg" alt="image of linear graph.">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="img-small" src="images/onetoone2.jpg" alt="image of cubic graph.">
+                                </figure>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ol class="a-list" start="4">
+                            <li>
+                                <figure>
+                                    <img class="img-small" src="images/onetoone3.jpg"
+                                        alt="image of absolute value graph.">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="img-small" src="images/onetoone4.jpg" alt="image of logarithmic graph.">
+                                </figure>
+                            </li>
+                        </ol>
+                    </div>
         </section>
-
         <section aria-labelledby="inverse-properties-h">
             <h2 id="inverse-properties-h">Properties of Inverses</h2>
-
             <div class="example">
                 <ol class="a-list">
                     <li>
-                        <p>If \(f\) has domain \(D\) and range \(R\), what are the domain and range of \(f^{-1}\)?</p>
+                        <p>If \((3,-1)\) is on the graph of \(f\), tell a point that is on the graph of \(f^{-1}\)?</p>
                         <div class="solution space-md"></div>
                     </li>
                     <li>
-                        <p>If \((a,b)\) is on \(f\), what point is on \(f^{-1}\)?</p>
+                        <p>If \(f\) has domain \(D=(-\infty,2]\cup(7,\infty)\) and range \(R = [1,6)\), what are the
+                            domain and range of \(f^{-1}\)?</p>
                         <div class="solution space-md"></div>
                     </li>
                     <li>
-                        <p>Explain the difference between \(f^{-1}(x)\) and \(f(x)^{-1}\).</p>
+                        <p>Explain the difference between \(f^{-1}(x)\) and \(\left(f(x)\right)^{-1}\).</p>
                         <div class="solution space-md"></div>
                     </li>
                 </ol>
             </div>
         </section>
-
         <section aria-labelledby="steps-h">
             <h2 id="steps-h">Steps to Find an Inverse</h2>
-
             <ol>
                 <li>Replace \(f(x)\) with \(y\)</li>
                 <li>Swap \(x\) and \(y\)</li>
                 <li>Solve for \(y\)</li>
                 <li>Rewrite as \(f^{-1}(x)\)</li>
             </ol>
-
             <div class="example">
-                <p>Find the inverse and graph both functions.</p>
-
-                <figure>
-                    <img src="images/inverse-grid-placeholder.png" alt="Grid for graphing a function and its inverse.">
-                    <figcaption>Graph both the function and its inverse.</figcaption>
-                </figure>
-
-                <div class="solution space-xxxxl"></div>
-            </div>
-
-            <div class="example">
-                <p>Find the inverse for given domain restrictions.</p>
-                <div class="solution space-xl"></div>
+                <p>For the problems below, find the inverse of each function.</p>
+                <ol class="a-list">
+                    <li>
+                        <p>\(f(x) = 2x + 3\)</p>
+                        <div class="solution space-xxxxl"></div>
+                    </li>
+                    <li>
+                        <p>\(f(x) = \sqrt{x-2}+1\)</p>
+                        <div class="solution space-xxxxl"></div>
+                    </li>
+                    <li>
+                        <p>\(f(x) = \cfrac{5}{x+3}\)</p>
+                        <div class="solution space-xxxxl"></div>
+                    </li>
+                </ol>
             </div>
         </section>
     </main>
