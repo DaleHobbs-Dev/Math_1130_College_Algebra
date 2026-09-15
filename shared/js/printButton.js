@@ -99,6 +99,8 @@ function createPrintButton(id) {
     button.classList.add('dontprint');
 
     button.addEventListener('click', () => {
+        // Brightspace injects this ReadSpeaker control into the content page.
+        document.getElementById('readspeaker_button_1')?.classList.add('dontprint');
         replaceBlanksForPrint();
         addPrintStyles();
 

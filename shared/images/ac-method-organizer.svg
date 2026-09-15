@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="200" viewBox="0 0 160 200" role="img" aria-labelledby="title desc">
+    <title id="title">AC-method factoring organizer</title>
+    <desc id="desc">A blank X-shaped organizer with A times C above it. Use the top for the product ac, the bottom for the sum b, and the left and right for the two numbers.</desc>
+    <text x="80" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#000">A &#215; C</text>
+    <path d="M 24,48 L 136,184 M 136,48 L 24,184" fill="none" stroke="#000" stroke-width="3"/>
+</svg>
