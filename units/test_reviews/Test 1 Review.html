@@ -7,385 +7,416 @@
     <title>Test 1 Review — Math 1130</title>
     <link rel="stylesheet" href="../../shared/css/mathstyles.css">
     <style>
-        .review-problems { padding-left: 1.5rem; }
-        .review-problems > li { margin-block: 0.5rem; }
-        .graph-wrap { max-width: 100%; margin-block: 0.75rem; }
-        .graph-caption { font-size: 0.9em; color: var(--color-gray); }
-        #desmos-fg { width: 360px; max-width: 100%; height: 240px; }
+        .review-problems {
+            padding-left: 1.5rem;
+        }
+
+        .review-problems>li {
+            margin-block: 0.5rem;
+        }
+
+        .graph-wrap {
+            max-width: 100%;
+            margin-block: 0.75rem;
+        }
+
+        .graph-caption {
+            font-size: 0.9em;
+            color: var(--color-gray);
+        }
+
+        #desmos-fg {
+            width: 360px;
+            max-width: 100%;
+            height: 240px;
+        }
+
         @media print {
-            .review-topic { break-inside: auto; page-break-inside: auto; }
-            .review-problems > li, .graph-wrap { break-inside: avoid; page-break-inside: avoid; }
+            .review-topic {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .review-problems>li,
+            .graph-wrap {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
         }
     </style>
 </head>
 
 <body>
     <main id="test-1-review" class="content" role="main">
-    <header class="page-header">
-    <h1>Test 1 Review</h1>
-    <p class="muted">Show all work. Use the space below each problem. You may attach additional paper if needed.</p>
-    </header>
+        <header class="page-header">
+            <h1>Test 1 Review</h1>
+            <p class="muted">Show all work. Use the space below each problem. You may attach additional paper if needed.
+            </p>
+        </header>
 
-    <!-- ========================================================= -->
-    <section aria-labelledby="functions-heading">
-    <h2 id="functions-heading">Section 1: Introduction to Functions Review</h2>
+        <!-- ========================================================= -->
+        <section aria-labelledby="functions-heading">
+            <h2 id="functions-heading">Section 1: Introduction to Functions Review</h2>
 
-    <!-- (a) Domain & Range from ordered pairs -->
-    <div class="example review-topic">
-        <h3>a) Domain and Range for a set of ordered pairs</h3>
-        <ol class="review-problems">
-            <li>For the relation \(R_1 = \{(-3,2),\,(0,-1),\,(2,2),\,(4,5),\,(4,-2)\}\), list the domain and range.
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>For the relation \(R_2 = \{(-5,7),\,(-2,0),\,(1,-3),\,(3,-3),\,(6,4)\}\), list the domain and range.
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (a) Domain & Range from ordered pairs -->
+            <div class="example review-topic">
+                <h3>a) Domain and Range for a set of ordered pairs</h3>
+                <ol class="review-problems">
+                    <li>For the relation \(R_1 = \{(-3,2),\,(0,-1),\,(2,2),\,(4,5),\,(4,-2)\}\), list the domain and
+                        range.
+                        <div class="solution space-l"></div>
+                    </li>
+                    <li>For the relation \(R_2 = \{(-5,7),\,(-2,0),\,(1,-3),\,(3,-3),\,(6,4)\}\), list the domain and
+                        range.
+                        <div class="solution space-l"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (b) Domain & Range from a graph -->
-    <div class="example review-topic">
-        <h3>b) Domain and Range of a given graph</h3>
-        <ol class="review-problems">
-            <li>
-                Consider the graph below. State the domain and range in interval notation.
-                <div class="graph-wrap">
-                    <!-- SVG: semicircle + open circle -->
-                    <svg width="320" height="220" viewBox="-6 -6 12 12" xmlns="http://www.w3.org/2000/svg"
-                        aria-labelledby="g1title g1desc" role="img">
-                        <title id="g1title">Graph 1</title>
-                        <desc id="g1desc">A semicircle centered at x=0 from x=-5 to x=5, y from 0 to about 5, with an
-                            open circle at (5,0) and a closed circle at (-5,0).</desc>
-                        <!-- grid -->
-                        <g stroke="#eee">
-                            <!-- vertical lines -->
-                            <path
-                                d="M -5 -5 V 5 M -4 -5 V 5 M -3 -5 V 5 M -2 -5 V 5 M -1 -5 V 5 M 0 -5 V 5 M 1 -5 V 5 M 2 -5 V 5 M 3 -5 V 5 M 4 -5 V 5 M 5 -5 V 5" />
-                            <!-- horizontal lines -->
-                            <path
-                                d="M -5 -5 H 5 M -4 -5 H 5 M -3 -5 H 5 M -2 -5 H 5 M -1 -5 H 5 M 0 -5 H 5 M 1 -5 H 5 M 2 -5 H 5 M 3 -5 H 5 M 4 -5 H 5 M 5 -5 H 5" />
-                        </g>
-                        <!-- axes -->
-                        <g stroke="#999">
-                            <line x1="-5.5" y1="0" x2="5.5" y2="0" />
-                            <line x1="0" y1="-5.5" x2="0" y2="5.5" />
-                        </g>
-                        <!-- semicircle y = sqrt(25 - x^2) for x in [-5,5) -->
-                        <path d="
+            <!-- (b) Domain & Range from a graph -->
+            <div class="example review-topic">
+                <h3>b) Domain and Range of a given graph</h3>
+                <ol class="review-problems">
+                    <li>
+                        Consider the graph below. State the domain and range in interval notation.
+                        <div class="graph-wrap">
+                            <!-- SVG: semicircle + open circle -->
+                            <svg width="320" height="220" viewBox="-6 -6 12 12" xmlns="http://www.w3.org/2000/svg"
+                                aria-labelledby="g1title g1desc" role="img">
+                                <title id="g1title">Graph 1</title>
+                                <desc id="g1desc">A semicircle centered at x=0 from x=-5 to x=5, y from 0 to about 5,
+                                    with an
+                                    open circle at (5,0) and a closed circle at (-5,0).</desc>
+                                <!-- grid -->
+                                <g stroke="#eee">
+                                    <!-- vertical lines -->
+                                    <path
+                                        d="M -5 -5 V 5 M -4 -5 V 5 M -3 -5 V 5 M -2 -5 V 5 M -1 -5 V 5 M 0 -5 V 5 M 1 -5 V 5 M 2 -5 V 5 M 3 -5 V 5 M 4 -5 V 5 M 5 -5 V 5" />
+                                    <!-- horizontal lines -->
+                                    <path
+                                        d="M -5 -5 H 5 M -4 -5 H 5 M -3 -5 H 5 M -2 -5 H 5 M -1 -5 H 5 M 0 -5 H 5 M 1 -5 H 5 M 2 -5 H 5 M 3 -5 H 5 M 4 -5 H 5 M 5 -5 H 5" />
+                                </g>
+                                <!-- axes -->
+                                <g stroke="#999">
+                                    <line x1="-5.5" y1="0" x2="5.5" y2="0" />
+                                    <line x1="0" y1="-5.5" x2="0" y2="5.5" />
+                                </g>
+                                <!-- semicircle y = sqrt(25 - x^2) for x in [-5,5) -->
+                                <path d="
               M -5 0
               C -5 2.761, -2.761 5, 0 5
               C 2.761 5, 5 2.761, 5 0
             " fill="none" stroke="#1a73e8" stroke-width="0.12" />
-                        <!-- closed at x=-5 -->
-                        <circle cx="-5" cy="0" r="0.14" fill="#1a73e8" />
-                        <!-- open at x=5 -->
-                        <circle cx="5" cy="0" r="0.14" fill="#fff" stroke="#1a73e8" stroke-width="0.12" />
-                    </svg>
-                </div>
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>
-                Consider the piecewise line segment below. State the domain and range.
-                <div class="graph-wrap">
-                    <!-- SVG: line segment from (-4,-2) open to (2,3) closed -->
-                    <svg width="320" height="220" viewBox="-6 -6 12 12" xmlns="http://www.w3.org/2000/svg"
-                        aria-labelledby="g2title g2desc" role="img">
-                        <title id="g2title">Graph 2</title>
-                        <desc id="g2desc">A single line segment increasing from open circle at (-4,-2) to closed circle
-                            at (2,3).</desc>
-                        <g stroke="#eee">
-                            <path
-                                d="M -5 -5 V 5 M -4 -5 V 5 M -3 -5 V 5 M -2 -5 V 5 M -1 -5 V 5 M 0 -5 V 5 M 1 -5 V 5 M 2 -5 V 5 M 3 -5 V 5 M 4 -5 V 5 M 5 -5 V 5" />
-                            <path
-                                d="M -5 -5 H 5 M -4 -5 H 5 M -3 -5 H 5 M -2 -5 H 5 M -1 -5 H 5 M 0 -5 H 5 M 1 -5 H 5 M 2 -5 H 5 M 3 -5 H 5 M 4 -5 H 5 M 5 -5 H 5" />
-                        </g>
-                        <g stroke="#999">
-                            <line x1="-5.5" y1="0" x2="5.5" y2="0" />
-                            <line x1="0" y1="-5.5" x2="0" y2="5.5" />
-                        </g>
-                        <line x1="-4" y1="-2" x2="2" y2="3" stroke="#ef6c00" stroke-width="0.12" />
-                        <circle cx="-4" cy="-2" r="0.14" fill="#fff" stroke="#ef6c00" stroke-width="0.12" />
-                        <circle cx="2" cy="3" r="0.14" fill="#ef6c00" />
-                    </svg>
-                </div>
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
-
-    <!-- (c) Function or not -->
-    <div class="example review-topic">
-        <h3>c) Does the scenario represent a function?</h3>
-        <ol class="review-problems">
-            <li>Each student ID is matched to their final course grade. Explain why this is (or is not) a function.
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Each person is matched to their favorite color(s). Explain why this is (or is not) a function.
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
-
-    <!-- (d) Evaluate functions (linear & quadratic) -->
-    <div class="example review-topic">
-        <h3>d) Evaluate a function at given inputs</h3>
-        <ol class="review-problems">
-            <li>Let \(f(x)= -3x+5\). Compute \(f(-2),\, f(0),\, f\!\left(\tfrac{7}{3}\right)\).
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Let \(g(x)= 2x^2-5x-3\). Compute \(g(-1),\, g(2),\, g\!\left(\tfrac{3}{2}\right)\).
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
-
-    <!-- (e) Operations on functions given by equations -->
-    <div class="example review-topic">
-        <h3>e) Function operations (equations given)</h3>
-        <p>Given \(f\) and \(g\) below, find \((f+g)(x),\,(f-g)(x),\,(fg)(x),\,\left(\dfrac{f}{g}\right)(x)\).</p>
-        <ol class="review-problems">
-            <li>\(f(x)=2x-1\), \(g(x)=x^2+4\).
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(f(x)=\sqrt{x+3}\) (assume domain where defined), \(g(x)=x-5\).
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
-
-    <!-- (f) Operations using graphs -->
-    <div class="example review-topic">
-        <h3>f) Function operations from graphs (evaluate at specific x)</h3>
-        <p>Two functions \(f\) (blue) and \(g\) (orange) are graphed. Using the graphs, compute \(f(x)\), \(g(x)\),
-            \(f\pm g\), \(fg\), and \(\dfrac{f}{g}\) at the indicated \(x\)-values.</p>
-        <div class="graph-wrap">
-            <!-- SVG: f is a V-shape; g is a line -->
-            <div class="graph-wrap">
-                <div id="desmos-fg" role="img" aria-label="Graphs of f and g for the function operations problems"></div>
-                <div class="graph-caption"><em>Blue:</em> \(f(x)=|x|+1\); <em>Orange:</em> \(g(x)=\tfrac12 x-1\).</div>
+                                <!-- closed at x=-5 -->
+                                <circle cx="-5" cy="0" r="0.14" fill="#1a73e8" />
+                                <!-- open at x=5 -->
+                                <circle cx="5" cy="0" r="0.14" fill="#fff" stroke="#1a73e8" stroke-width="0.12" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        Consider the piecewise line segment below. State the domain and range.
+                        <div class="graph-wrap">
+                            <!-- SVG: line segment from (-4,-2) open to (2,3) closed -->
+                            <svg width="320" height="220" viewBox="-6 -6 12 12" xmlns="http://www.w3.org/2000/svg"
+                                aria-labelledby="g2title g2desc" role="img">
+                                <title id="g2title">Graph 2</title>
+                                <desc id="g2desc">A single line segment increasing from open circle at (-4,-2) to closed
+                                    circle
+                                    at (2,3).</desc>
+                                <g stroke="#eee">
+                                    <path
+                                        d="M -5 -5 V 5 M -4 -5 V 5 M -3 -5 V 5 M -2 -5 V 5 M -1 -5 V 5 M 0 -5 V 5 M 1 -5 V 5 M 2 -5 V 5 M 3 -5 V 5 M 4 -5 V 5 M 5 -5 V 5" />
+                                    <path
+                                        d="M -5 -5 H 5 M -4 -5 H 5 M -3 -5 H 5 M -2 -5 H 5 M -1 -5 H 5 M 0 -5 H 5 M 1 -5 H 5 M 2 -5 H 5 M 3 -5 H 5 M 4 -5 H 5 M 5 -5 H 5" />
+                                </g>
+                                <g stroke="#999">
+                                    <line x1="-5.5" y1="0" x2="5.5" y2="0" />
+                                    <line x1="0" y1="-5.5" x2="0" y2="5.5" />
+                                </g>
+                                <line x1="-4" y1="-2" x2="2" y2="3" stroke="#ef6c00" stroke-width="0.12" />
+                                <circle cx="-4" cy="-2" r="0.14" fill="#fff" stroke="#ef6c00" stroke-width="0.12" />
+                                <circle cx="2" cy="3" r="0.14" fill="#ef6c00" />
+                            </svg>
+                        </div>
+                    </li>
+                </ol>
             </div>
-        </div>
-        <ol class="review-problems">
-            <li>Use the graph to estimate values at \(x=-4,\, -1,\, 2\).
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Compute \(f(x)\pm g(x)\), \(f(x)g(x)\), and \(\dfrac{f(x)}{g(x)}\) at \(x=-2\) and \(x=3\). (If a value
-                is undefined, say so.)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
 
-    </section>
-    <div class="page-break"></div>
+            <!-- (c) Function or not -->
+            <div class="example review-topic">
+                <h3>c) Does the scenario represent a function?</h3>
+                <ol class="review-problems">
+                    <li>Each student ID is matched to their final course grade. Explain why this is (or is not) a
+                        function.
+                        <div class="solution space-xl"></div>
+                    </li>
+                    <li>Each person is matched to their favorite color(s). Explain why this is (or is not) a function.
+                        <div class="solution space-xl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- ========================================================= -->
-    <section aria-labelledby="algebra-heading">
-    <h2 id="algebra-heading">Section 2: Review Concepts Used in Algebra</h2>
+            <!-- (d) Evaluate functions (linear & quadratic) -->
+            <div class="example review-topic">
+                <h3>d) Evaluate a function at given inputs</h3>
+                <ol class="review-problems">
+                    <li>Let \(f(x)= -3x+5\). Compute \(f(-2),\, f(0),\, f\!\left(\tfrac{7}{3}\right)\).
+                        <div class="solution space-xxl"></div>
+                    </li>
+                    <li>Let \(g(x)= 2x^2-5x-3\). Compute \(g(-1),\, g(2),\, g\!\left(\tfrac{3}{2}\right)\).
+                        <div class="solution space-xxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (a) Exponent rules multiply/divide like bases -->
-    <div class="example review-topic">
-        <h3>a) Exponent rules: multiply & divide like bases</h3>
-        <ol class="review-problems">
-            <li>Simplify: \(x^3\cdot x^5\); \(\,\) \(2^4\cdot 2^7\); \(\,\) \(a^2b^3\cdot a^5b\).
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Simplify: \(\dfrac{m^{10}}{m^6}\); \(\,\) \(\dfrac{3^8}{3^2}\); \(\,\)
-                \(\dfrac{p^5q^2}{p^2q^6}\).
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (e) Operations on functions given by equations -->
+            <div class="example review-topic">
+                <h3>e) Function operations (equations given)</h3>
+                <p>Given \(f\) and \(g\) below, find \((f+g)(x),\,(f-g)(x),\,(fg)(x),\,\left(\dfrac{f}{g}\right)(x)\).
+                </p>
+                <ol class="review-problems">
+                    <li>\(f(x)=2x-1\), \(g(x)=x^2+4\).
+                        <div class="solution space-xxl"></div>
+                    </li>
+                    <li>Find \((f+g)(3),\,(f-g)(-4),\,(fg)(-2),\,\left(\dfrac{f}{g}\right)(6)\) given \(f(x)=2x-1\) and
+                        \(g(x)=x^2+4\).
+                        <div class="solution space-l"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (b) Zero power -->
-    <div class="example review-topic">
-        <h3>b) Zero power rule</h3>
-        <ol class="review-problems">
-            <li>Simplify: \((7x^4y)^0\); \(\,\) \(\left(-\dfrac{3}{5}\right)^0\).
-                <div class="solution space-xl"></div>
-            </li>
-            <li>Simplify: \((a-b)^0\); \(\,\) \(\left(\frac{x^2y^3}{8m^8p^{-4}}\right)^0\) (state “undefined” or
-                “indeterminate” as commonly
-                treated
-                in
-                Algebra contexts).
-                <div class="solution space-xl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (f) Operations using graphs -->
+            <div class="example review-topic">
+                <h3>f) Function operations from graphs (evaluate at specific x)</h3>
+                <p>Two functions \(f\) (blue) and \(g\) (orange) are graphed. Using the graphs, compute \(f(x)\),
+                    \(g(x)\),
+                    \(f\pm g\), \(fg\), and \(\dfrac{f}{g}\) at the indicated \(x\)-values.</p>
+                <div class="graph-wrap">
+                    <!-- SVG: f is a V-shape; g is a line -->
+                    <div class="graph-wrap">
+                        <div id="desmos-fg" role="img"
+                            aria-label="Graphs of f and g for the function operations problems"></div>
+                        <div class="graph-caption"><em>Blue:</em> \(f(x)=|x|+1\); <em>Orange:</em> \(g(x)=\tfrac12
+                            x-1\).</div>
+                    </div>
+                </div>
+                <p>Compute \(f(x)\pm g(x)\), \(f(x)g(x)\), and \(\dfrac{f(x)}{g(x)}\) at \(x=-2\) and \(x=3\). (If
+                    a value
+                    is undefined, say so.)</p>
+                <div class="solution space-s"></div>
+            </div>
 
-    <!-- (c) Negative exponents -->
-    <div class="example review-topic">
-        <h3>c) Negative exponents (rewrite with positive exponents)</h3>
-        <ol class="review-problems">
-            <li>\(\dfrac{5x^{-3}y^2}{x^{-1}y^{-4}}\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(\dfrac{(2a^{-2}b^3)^{-1}}{4a^{-3}}\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+        </section>
+        <div class="page-break"></div>
 
-    <!-- (d) Multiply polynomials -->
-    <div class="example review-topic">
-        <h3>d) Multiply polynomials</h3>
-        <ol class="review-problems">
-            <li>Monomial × Monomial: \((3x^2)(-4x^3)\); \(\,\) \((-5a^4b)(2a^2b^3)\).
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Monomial × Binomial: \(5x(2x-7)\); \(\,\) \(-3y^2(4y+1)\).
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+        <!-- ========================================================= -->
+        <section aria-labelledby="algebra-heading">
+            <h2 id="algebra-heading">Section 2: Review Concepts Used in Algebra</h2>
 
-    <!-- (e) Add/Subtract polynomials -->
-    <div class="example review-topic">
-        <h3>e) Add/Subtract polynomials</h3>
-        <ol class="review-problems">
-            <li>\((3x^2-4x+1)+(2x^2+5x-9)\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\((7y^3-2y+6)-(-4y^3+5y-8)\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (a) Exponent rules multiply/divide like bases -->
+            <div class="example review-topic">
+                <h3>a) Exponent rules: multiply & divide like bases</h3>
+                <ol class="review-problems">
+                    <li>Simplify: \(x^3\cdot x^5\); \(\,\) \(2^4\cdot 2^7\); \(\,\) \(a^2b^3\cdot a^5b\).
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>Simplify: \(\dfrac{m^{10}}{m^6}\); \(\,\) \(\dfrac{3^8}{3^2}\); \(\,\)
+                        \(\dfrac{p^5q^2}{p^2q^6}\).
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    </section>
-    <div class="page-break"></div>
+            <!-- (b) Zero power -->
+            <div class="example review-topic">
+                <h3>b) Zero power rule</h3>
+                <ol class="review-problems">
+                    <li>Simplify: \((7x^4y)^0\); \(\,\) \(\left(-\dfrac{3}{5}\right)^0\).
+                        <div class="solution space-m"></div>
+                    </li>
+                    <li>Simplify: \((a-b)^0\); \(\,\) \(\left(\frac{x^2y^3}{8m^8p^{-4}}\right)^0\) (state “undefined” or
+                        “indeterminate” as commonly
+                        treated
+                        in
+                        Algebra contexts).
+                        <div class="solution space-m"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- ========================================================= -->
-    <section aria-labelledby="factoring-heading">
-    <h2 id="factoring-heading">Section 3: Factoring</h2>
+            <!-- (c) Negative exponents -->
+            <div class="example review-topic">
+                <h3>c) Negative exponents (rewrite with positive exponents)</h3>
+                <ol class="review-problems">
+                    <li>\(\dfrac{5x^{-3}y^2}{x^{-1}y^{-4}}\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(\dfrac{(2a^{-2}b^3)^{-1}}{4a^{-3}}\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (a) Find the GCF -->
-    <div class="example review-topic">
-        <h3>a) Find the GCF</h3>
-        <ol class="review-problems">
-            <li>Numbers: \(\text{GCF}(84,\, 126)\); \(\,\) \(\text{GCF}(144,\, 180)\).
-                <div class="solution space-xl"></div>
-            </li>
-            <li>Expressions: \(\text{GCF}(12x^3y^2,\, 18x^2y^5)\); \(\,\) \(\text{GCF}(15a^4b^2,\, 20a^2b^3)\).
-                <div class="solution space-xl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (d) Multiply polynomials -->
+            <div class="example review-topic">
+                <h3>d) Multiply polynomials</h3>
+                <ol class="review-problems">
+                    <li>Monomial × Monomial: \((3x^2)(-4x^3)\); \(\,\) \((-5a^4b)(2a^2b^3)\).
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>Monomial × Binomial: \(5x(2x-7)\); \(\,\) \(-3y^2(4y+1)\).
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (b) Factor out the GCF -->
-    <div class="example review-topic">
-        <h3>b) Factor out the GCF</h3>
-        <ol class="review-problems">
-            <li>\(24x^3y^2-36x^2y\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(14a^5b+21a^3b^2-7a^4b^3\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (e) Add/Subtract polynomials -->
+            <div class="example review-topic">
+                <h3>e) Add/Subtract polynomials</h3>
+                <ol class="review-problems">
+                    <li>\((3x^2-4x+1)+(2x^2+5x-9)\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\((7y^3-2y+6)-(-4y^3+5y-8)\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (c) GCF is a binomial -->
-    <div class="example review-topic">
-        <h3>c) Factor out the GCF.</h3>
-        <ol class="review-problems">
-            <li>\((x+2)y + 3(x+2)\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(5(a-b) - 2x(a-b)\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+        </section>
+        <div class="page-break"></div>
 
-    <!-- (d) Factor by grouping (4 terms) -->
-    <div class="example review-topic">
-        <h3>d) Factor by grouping (4 terms)</h3>
-        <ol class="review-problems">
-            <li>\(x^3 - 3x^2 + 4x - 12\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(2a^3 + 6a^2 - a - 3\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+        <!-- ========================================================= -->
+        <section aria-labelledby="factoring-heading">
+            <h2 id="factoring-heading">Section 3: Factoring</h2>
 
-    <!-- (e) Trinomial ax^2+bx+c with a=1 -->
-    <div class="example review-topic">
-        <h3>e) Factor: Trinomial \(ax^2+bx+c\) when \(a=1\)</h3>
-        <ol class="review-problems">
-            <li>\(x^2 - 7x + 12\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(y^2 + 11y + 24\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (a) Find the GCF -->
+            <div class="example review-topic">
+                <h3>a) Find the GCF</h3>
+                <ol class="review-problems">
+                    <li>Numbers: \(\text{GCF}(84,\, 126)\); \(\,\) \(\text{GCF}(144,\, 180)\).
+                        <div class="solution space-xl"></div>
+                    </li>
+                    <li>Expressions: \(\text{GCF}(12x^3y^2,\, 18x^2y^5)\); \(\,\) \(\text{GCF}(15a^4b^2,\, 20a^2b^3)\).
+                        <div class="solution space-xl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (f) Trinomial with a != 1 -->
-    <div class="example review-topic">
-        <h3>f) Factor: Trinomial \(ax^2+bx+c\) when \(a\neq 1\)</h3>
-        <ol class="review-problems">
-            <li>\(6x^2 + x - 12\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(8y^2 - 14y + 3\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (b) Factor out the GCF -->
+            <div class="example review-topic">
+                <h3>b) Factor out the GCF</h3>
+                <ol class="review-problems">
+                    <li>\(24x^3y^2-36x^2y\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(14a^5b+21a^3b^2-7a^4b^3\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (g) Difference of squares -->
-    <div class="example review-topic">
-        <h3>g) Factor a difference of squares</h3>
-        <ol class="review-problems">
-            <li>\(y^2-100\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(49x^2 - 81\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>\(25a^4 - 4b^2\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (c) GCF is a binomial -->
+            <div class="example review-topic">
+                <h3>c) Factor out the GCF.</h3>
+                <ol class="review-problems">
+                    <li>\((x+2)y + 3(x+2)\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(5(a-b) - 2x(a-b)\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (h) Sum & difference of cubes -->
-    <div class="example review-topic">
-        <h3>h) Factor a sum and a difference of cubes</h3>
-        <ol class="review-problems">
-            <li>Sum: \(x^3 + 64\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Difference: \(27y^3 - 8\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
+            <!-- (d) Factor by grouping (4 terms) -->
+            <div class="example review-topic">
+                <h3>d) Factor by grouping (4 terms)</h3>
+                <ol class="review-problems">
+                    <li>\(x^3 - 3x^2 + 4x - 12\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(2a^3 + 6a^2 - a - 3\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
 
-    <!-- (i) Solve quadratics by factoring -->
-    <div class="example review-topic">
-        <h3>i) Solve quadratic equations by factoring</h3>
-        <ol class="review-problems">
-            <li>\((x-4)(x+7)=0\)
-                <div class="solution space-xl"></div>
-            </li>
-            <li>\(x^2-5x-24=0\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Not equal to 0 (rearrange first): \(2x^2+6x=16\)
-                <div class="solution space-xxxl"></div>
-            </li>
-            <li>Not equal to 0 (rearrange first): \(3y^2-12=9y\)
-                <div class="solution space-xxxl"></div>
-            </li>
-        </ol>
-    </div>
-    </section>
+            <!-- (e) Trinomial ax^2+bx+c with a=1 -->
+            <div class="example review-topic">
+                <h3>e) Factor: Trinomial \(ax^2+bx+c\) when \(a=1\)</h3>
+                <ol class="review-problems">
+                    <li>\(x^2 - 7x + 12\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(y^2 + 11y + 24\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- (f) Trinomial with a != 1 -->
+            <div class="example review-topic">
+                <h3>f) Factor: Trinomial \(ax^2+bx+c\) when \(a\neq 1\)</h3>
+                <ol class="review-problems">
+                    <li>\(6x^2 + x - 12\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(8y^2 - 14y + 3\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- (g) Difference of squares -->
+            <div class="example review-topic">
+                <h3>g) Factor a difference of squares</h3>
+                <ol class="review-problems">
+                    <li>\(y^2-100\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(49x^2 - 81\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>\(25a^4 - 4b^2\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- (h) Sum & difference of cubes -->
+            <div class="example review-topic">
+                <h3>h) Factor a sum and a difference of cubes</h3>
+                <ol class="review-problems">
+                    <li>Sum: \(x^3 + 64\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                    <li>Difference: \(27y^3 - 8\)
+                        <div class="solution space-xxxl"></div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- (i) Solve quadratics by factoring -->
+            <div class="example review-topic">
+                <h3>i) Solve quadratic equations by factoring</h3>
+                <ol class="review-problems">
+                    <li>\((x-4)(x+7)=0\)
+                        <div class="solution space-xl"></div>
+                    </li>
+                    <li>\(x^2-5x-24=0\)
+                        <div class="solution space-xl"></div>
+                    </li>
+                    <li>Not equal to 0 (rearrange first): \(2x^2+6x=16\)
+                        <div class="solution space-xxl"></div>
+                    </li>
+                    <li>Not equal to 0 (rearrange first): \(3y^2-12=9y\)
+                        <div class="solution space-xxl"></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
     <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script>
